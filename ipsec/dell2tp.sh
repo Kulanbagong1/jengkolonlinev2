@@ -13,7 +13,7 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- icanhazip.com);
-IZIN=$( curl https://kmk101team.github.io/izin | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/Kulanbagong1/izinn/main/ip | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
 if [ $MYIP = $IZIN ]; then
 clear
@@ -68,4 +68,4 @@ echo "=========================="
 echo "Username  : $VPN_USER"
 echo "Expired   : $exp"
 echo "=========================="
-echo "Script By @XDecrytorId"
+echo "Script By @Jengkol_Online"
