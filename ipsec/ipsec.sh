@@ -17,7 +17,7 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- icanhazip.com);
-IZIN=$( curl https://kmk101team.github.io/izin | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/Kulanbagong1/izinn/main/ip | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
 if [ $MYIP = $IZIN ]; then
 clear
@@ -35,7 +35,7 @@ echo "Checking VPS"
 clear
 # ==================================================
 # Link Hosting Kalian
-bzvpn="raw.githubusercontent.com/Kmk101team/kmkz/main/ipsec"
+bzvpn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/ipsec"
 
 VPN_IPSEC_PSK='myvpn'
 NET_IFACE=$(ip -o $NET_IFACE -4 route show to default | awk '{print $5}');
