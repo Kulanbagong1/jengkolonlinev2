@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/anuybazoelk
+# My Telegram : https://t.me/Jengkol_Online
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -14,22 +14,23 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl https://kmk101team.github.io/izin | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/Kulanbagong1/izinn/main/ip | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Facebook : https://m.facebook.com/Anuybazoelk639"
-echo -e "${NC}${LIGHT}WhatsApp : 085349326511"
-echo -e "${NC}${LIGHT}WhatsApp : 081774970898"
-echo -e "${NC}${LIGHT}Youtube : youtube.com/@nyarigratisan"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/anuybazoelk"
-echo -e "${NC}${LIGHT}Telegram : https;//t.me/anuybazoelk639"
+#echo -e "${NC}${LIGHT}Facebook : https://m.facebook.com/Anuybazoelk639"
+echo -e "${NC}${LIGHT}WhatsApp : 082372139631"
+#echo -e "${NC}${LIGHT}WhatsApp : 081774970898"
+#echo -e "${NC}${LIGHT}Youtube : youtube.com/@nyarigratisan"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/Jengkol_Online"
+#echo -e "${NC}${LIGHT}Telegram : https;//t.me/anuybazoelk639"
 exit 0
 fi
+clear
 # Link Hosting Kalian
-bzvpn="raw.githubusercontent.com/Anuy639/beta/bz/backup"
+bzvpn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/backup"
 
 curl https://rclone.org/install.sh | bash
 printf "q\n" | rclone config
