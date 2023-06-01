@@ -199,12 +199,12 @@ echo "   - XRAYS Trojan GRPC       : 443" | tee -a log-install.txt
 echo "   - Sowdowsoks TLS          : 443" | tee -a log-install.txt
 echo "   - Sowdowsoks None TLS     : 80" | tee -a log-install.txt
 echo "   - Sowdowsoks GRPC         : 443" | tee -a log-install.txt
-echo "   - Websocket TLS           : 443"  | tee -a log-install.txt
+echo "   - Websocket TLS           : 443, 2096"  | tee -a log-install.txt
 echo "   - Websocket None TLS      : 80, 8880"  | tee -a log-install.txt
 echo "   - Websocket Ovpn          : 2086"  | tee -a log-install.txt
-echo "   - OHP SSH                 : 8181"  | tee -a log-install.txt
-echo "   - OHP Dropbear            : 8282"  | tee -a log-install.txt
-echo "   - OHP OpenVPN             : 8383"  | tee -a log-install.txt
+echo "   - OHP SSH                 : 8585"  | tee -a log-install.txt
+echo "   - OHP Dropbear            : 8686"  | tee -a log-install.txt
+echo "   - OHP OpenVPN             : 8787"  | tee -a log-install.txt
 echo "   - Tr Go                   : 443"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
