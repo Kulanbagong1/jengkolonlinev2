@@ -107,7 +107,7 @@ echo -e "   ${YELL}Name Author${NC}   :  ${putih}$Namee${NC}"
 echo -e ""
 echo -e "\033[96m└────────────────────────────────────────────────────────────┘${NC}"
 echo -e ""
-read -p "   Select From Options [ 1 - 8 or x exit ] : " menu
+read -p "   Select From Options [ 1 - 18 or x exit ] : " menu
 case $menu in
 1) clear ;
     sshovpnmenu
