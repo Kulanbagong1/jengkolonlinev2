@@ -77,7 +77,7 @@ echo -e "   ${YELL}NS Domain${NC}     :   ${putih}$NS${NC}"
 echo -e ""
 echo -e "\033[96m└────────────────────────────────────────────────────────────┘${NC}"
 echo -e "\033[96m┌────────────────────────────────────────────────────────────┐${NC}"
-echo -e "\e[1;97m                   Menu PPTP              \e[0m"
+echo -e "\e[1;97m                   Menu PENGATURAN              \e[0m"
 echo -e "\033[96m────────────────────────────────────────────────────────────${NC}"
 echo -e ""
 echo -e "❇️ 1) Add Host Atau Domain Anda                                          "
@@ -106,7 +106,7 @@ echo -e "   ${YELL}Name Author${NC}   :  ${putih}$Namee${NC}"
 echo -e ""
 echo -e "\033[96m└────────────────────────────────────────────────────────────┘${NC}"
 echo -e ""
-read -p "   Select From Options [ 1 - 3 or x exit ] : " menu
+read -p "   Select From Options [ 1 - 14 or x exit ] : " menu
 case $menu in
 1) clear ;
     addhost
