@@ -36,7 +36,7 @@ else
 domain=$IP2
 fi
 IP=$(wget -qO- ipinfo.io/ip);
-sstp="$(cat ~/log-install.txt | grep -i SSTP | cut -d: -f2|sed 's/ //g')"
+sstp="$(cat ~/log-install.txt | grep -i SSTP VPN | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "Usernew : " -e user
 		CLIENT_EXISTS=$(grep -w $user /var/lib/bzstorevpn/data-user-sstp | wc -l)
@@ -57,10 +57,9 @@ EOF
 echo -e "### $user $exp">>"/var/lib/bzstorevpn/data-user-sstp"
 clear
 cat <<EOF
-
-============================
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 SSTP VPN
-============================
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 IP/Host   : $IP
 Domain    : $domain
 Username  : $user
@@ -69,6 +68,6 @@ Port      : $sstp
 Cert      : http://$IP:89/server.crt
 Created   : $hariini
 Expired   : $exp
-============================
-Script By  @XDecrytorId
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Script By  @Jengkol_Online
 EOF
