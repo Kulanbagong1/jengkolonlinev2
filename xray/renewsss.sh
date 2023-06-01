@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/anuybazoelk
+# My Telegram : https://t.me/Anuybazoelk
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -13,13 +13,21 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- icanhazip.com);
-IZIN=$( curl https://raw.githubusercontent.com/Kulanbagong1/izinn/main/ip | grep $MYIP )
+IZIN=$( curl https://kmk101team.github.io/izin | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
 if [ $MYIP = $IZIN ]; then
 clear
 echo -e "${CYAN}Akses Diizinkan...${off}"
 sleep 1
 else
+clear
+echo -e "${PURPLE}Akses Diblokir!${off}"
+echo "Hanya Untuk Pengguna Berbayar!"
+echo "Silahkan Hubungi Admin"
+exit 0
+fi
+clear
+echo "Checking VPS"
 clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^##&# " "/etc/xray/config.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
