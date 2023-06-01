@@ -41,7 +41,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#### " "/etc/xray/config.json")
 	echo ""
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo -e "==============================="
+	echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 	grep -E "^#### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -64,10 +64,10 @@ sed -i "s/#### $user $exp/#### $user $exp4/g" /etc/xray/config.json
 service cron restart
 clear
 echo ""
-echo "==============================="
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo "  XRAYS/Vless Account Renewed  "
-echo "==============================="
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo "Username  : $user"
 echo "Expired   : $exp4"
-echo "==============================="
-echo "Script By @XDecrytorId"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo "Script By @Jengkol_Online
