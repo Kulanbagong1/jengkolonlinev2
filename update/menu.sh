@@ -88,7 +88,7 @@ echo -e "   ${grenbo}[2]❇️${NC} ${YELL}MENU VMESS${NC}          | ${grenbo}[
 echo -e "   ${grenbo}[3]❇️${NC} ${YELL}MENU VLESS${NC}          | ${grenbo}[9]❇️${NC} ${YELL}MENU PPTP${NC}"
 echo -e "   ${grenbo}[4]❇️${NC} ${YELL}MENU TROJAN${NC}         | ${grenbo}[10]❇️${NC} ${YELL}MENU SSTP${NC}"
 echo -e "   ${grenbo}[5]❇️${NC} ${YELL}MENU TROJAN GO${NC}      | ${grenbo}[11]❇️${NC} ${YELL}MENU WIREGUARD${NC}"
-echo -e "   ${grenbo}[6]❇️${NC} ${YELL}MENU SOWDOWSOKS${NC}     | ${grenbo}[12]❇️${NC} ${YELL}INSTALL UDP${NC}"
+echo -e "   ${grenbo}[6]❇️${NC} ${YELL}MENU SOWDOWSOKS${NC}     | ${grenbo}[12]❇️${NC} ${YELL}MENU SOWDOWSOKS-LIBEW${NC}"
 echo -e ""
 echo -e "\033[96m────────────────────────────────────────────────────────────${NC}"
 echo -e "\e[1;97m                    MENU SETTING              \e[0m"
@@ -96,6 +96,7 @@ echo -e "\033[96m─────────────────────
 echo -e "   ${grenbo}[13]❇️${NC} ${YELL}CEK SERVICE VPS${NC}    | ${grenbo}[16]❇️${NC} ${YELL}EDIT PROT V2RAY${NC}"
 echo -e "   ${grenbo}[14]❇️${NC} ${YELL}PENGGATURAN${NC}        | ${grenbo}[17]❇️${NC} ${YELL}ADD NOTIF BOT${NC}"
 echo -e "   ${grenbo}[15]❇️${NC} ${YELL}CEK V2RAY${NC}          | ${grenbo}[18]❇️${NC} ${YELL}ADD BOT PANEL${NC}"
+echo -e "   ${grenbo}[19]❇️${NC} ${YELL}INSTALL UDP${NC}"
 echo -e "\033[96m────────────────────────────────────────────────────────────${NC}"
 echo -e "\e[1;97m                    NEWBIE TUNNEL              \e[0m"
 echo -e "\033[96m────────────────────────────────────────────────────────────${NC}"
@@ -125,7 +126,7 @@ case $menu in
     trgomenu
     ;;
 6) clear ;
-    ssmenu
+    sssmenu
     ;;
 7) clear ;
     ssrmenu
@@ -142,7 +143,7 @@ case $menu in
 11) clear ;
     wgmenu
     ;;
-12) clear ;
+19) clear ;
     wget --load-cookies /tmp/cookies.txt ${UDPCORE} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp
    ;;        
 13) clear ;
@@ -162,6 +163,9 @@ case $menu in
    ;;
 18) clear ;
   wget ${BOT}xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh
+   ;;
+12) clear ;
+  ssmenu
    ;;
 x) clear ;
    exit
