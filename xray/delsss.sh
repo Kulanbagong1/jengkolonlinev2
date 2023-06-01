@@ -29,14 +29,14 @@ fi
 clear
 echo "Checking VPS"
 clear
-source /var/lib/bzstorevpn/ipvps.conf
-if [[ "$IP" = "" ]]; then
-domain=$(cat /etc/xray/domain)
-else
-domain=$IP
-fi
-clear
-NUMBER_OF_CLIENTS=$(grep -E "^##&# " "/etc/xray/config.json" | sort | uniq | cut -d ' ' -f 2 | wc -l)
+#source /var/lib/bzstorevpn/ipvps.conf
+#if [[ "$IP" = "" ]]; then
+#domain=$(cat /etc/xray/domain)
+#else
+#domain=$IP
+#fi
+#clear
+#NUMBER_OF_CLIENTS=$(grep -E "^##&# " "/etc/xray/config.json" | sort | uniq | cut -d ' ' -f 2 | wc -l)
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
 		echo ""
