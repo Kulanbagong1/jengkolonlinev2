@@ -189,13 +189,24 @@ screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7800 --max-clients 500
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500
 
 # setting port ssh
-sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
+cd
+apt-get -y update
+sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g'
+
+# /etc/ssh/sshd_config
+sed -i '/Port 22/a Port 500' /etc/ssh/sshd_config
+sed -i '/Port 22/a Port 40000' /etc/ssh/sshd_config
+sed -i '/Port 22/a Port 51443' /etc/ssh/sshd_config
+sed -i '/Port 22/a Port 58080' /etc/ssh/sshd_config
+sed -i '/Port 22/a Port 200' /etc/ssh/sshd_config
+sed -i 's/#Port 22/Port 22/g' /etc/ssh/sshd_config
+/etc/init.d/ssh restart
 
 # install dropbear
 apt -y install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=143/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109"/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109 -p 68 -p 69 -p 110"/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/dropbear restart
@@ -282,17 +293,20 @@ socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
 
 [dropbear]
-accept = 445
+accept = 222
+connect = 127.0.0.1:22
+
+[dropbear]
+accept = 777
 connect = 127.0.0.1:109
 
-[openssh]
-accept = 777
-connect = 127.0.0.1:443
-
 [openvpn]
-accept = 990
+accept = 442
 connect = 127.0.0.1:1194
 
+[kontol-stunnel]
+accept = 2096
+connect = 127.0.0.1:2091
 END
 
 # make a certificate
@@ -406,7 +420,7 @@ netfilter-persistent reload
 cd /usr/bin
 wget -O addhost "https://${bzvpn}/addhost.sh"
 wget -O about "https://${bzvpn}/about.sh"
-wget -O menu "https://raw.githubusercontent.com/Kmk101team/kmkz/main/update/menu.sh"
+wget -O menu "https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/update/menu.sh"
 wget -O addssh "https://${bzvpn}/addssh.sh"
 wget -O trialssh "https://${bzvpn}/trialssh.sh"
 wget -O delssh "https://${bzvpn}/delssh.sh"
@@ -434,24 +448,27 @@ wget -O xp "https://${bzvpn}/xp.sh"
 wget -O swapkvm "https://${bzvpn}/swapkvm.sh"
 wget -O addvmess "https://${bzvpnn}/addv2ray.sh"
 wget -O addvless "https://${bzvpnn}/addvless.sh"
+wget -O addvless "https://${bzvpnn}/addsss.sh"
 wget -O addtrojan "https://${bzvpnn}/addtrojan.sh"
 wget -O delvmess "https://${bzvpnn}/delv2ray.sh"
 wget -O delvless "https://${bzvpnn}/delvless.sh"
+wget -O delsss "https://${bzvpnn}/delsss.sh"
 wget -O deltrojan "https://${bzvpnn}/deltrojan.sh"
 wget -O cekvmess "https://${bzvpnn}/cekv2ray.sh"
 wget -O cekvless "https://${bzvpnn}/cekvless.sh"
 wget -O cektrojan "https://${bzvpnn}/cektrojan.sh"
 wget -O renewvmess "https://${bzvpnn}/renewv2ray.sh"
 wget -O renewvless "https://${bzvpnn}/renewvless.sh"
+wget -O renewsss "https://${bzvpnn}/renewsss.sh"
 wget -O renewtrojan "https://${bzvpnn}/renewtrojan.sh"
 wget -O certv2ray "https://${bzvpnn}/certv2ray.sh"
 wget -O addtrgo "https://${bzvpnnn}/addtrgo.sh"
 wget -O deltrgo "https://${bzvpnnn}/deltrgo.sh"
 wget -O renewtrgo "https://${bzvpnnn}/renewtrgo.sh"
 wget -O cektrgo "https://${bzvpnnn}/cektrgo.sh"
-wget -O portsshnontls "https://raw.githubusercontent.com/Kmk101team/kmkz/main/websocket/portsshnontls.sh"
-wget -O portsshws "https://raw.githubusercontent.com/Kmk101team/kmkz/main/websocket/portsshws.sh"
-
+wget -O portsshnontls "https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/websocket/portsshnontls.sh"
+wget -O portsshws "https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/websocket/portsshws.sh"
+wget -O sssmenu "https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/update/sssmenu.sh"
 wget -O sshovpnmenu "https://raw.githubusercontent.com/Kmk101team/kmkz/main/update/sshovpn.sh"
 wget -O l2tpmenu "https://raw.githubusercontent.com/Kmk101team/kmkz/main/update/l2tpmenu.sh"
 wget -O pptpmenu "https://raw.githubusercontent.com/Kmk101team/kmkz/main/update/pptpmenu.sh"
@@ -476,6 +493,7 @@ chmod +x pptpmenu
 chmod +x sstpmenu
 chmod +x wgmenu
 chmod +x ssmenu
+chmod +x sssmenu
 chmod +x ssrmenu
 chmod +x vmessmenu
 chmod +x vlessmenu
@@ -524,6 +542,9 @@ chmod +x renewvmess
 chmod +x renewvless
 chmod +x renewtrojan
 chmod +x certv2ray
+chmod +x addsss
+chmod +x delsss
+chmod +x renewsss
 chmod +x addtrgo
 chmod +x deltrgo
 chmod +x renewtrgo
