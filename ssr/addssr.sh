@@ -76,7 +76,7 @@ service cron restart
 IP=$(wget -qO- ifconfig.co);
 clear
 echo -e ""
-echo -e "======-SHADOWSOCKSR-======"
+echo -e "\033[0;34m━━━━━━━━━━━━━SODOWSHOKS-R━━━━━━━━━━━━\033[0m"
 echo -e "IP/Host     : ${IP}"
 echo -e "Domain      : $domain"
 echo -e "Port        : ${ssr_port}"
@@ -87,7 +87,7 @@ echo -e "Obfs        : ${Red_font_prefix}${ssr_obfs}"
 echo -e "Max Device  : ${ssr_protocol_param}"
 echo -e "Created     : $hariini"
 echo -e "Expired     : ${exp} "
-echo -e "=========================="
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "Link SSR    : ${ssr_link}"
-echo -e "=========================="
-echo -e "Script By  @XDecrytorId"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "Script By  @Jengkol_Online
