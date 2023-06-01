@@ -12,7 +12,7 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- icanhazip.com);
-IZIN=$( curl https://kmk101team.github.io/izin | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/Kulanbagong1/izinn/main/ip | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
 if [ $MYIP = $IZIN ]; then
 clear
@@ -30,16 +30,16 @@ echo "Checking VPS"
 clear
 # ==================================================
 # Link Hosting Kalian
-bzvpn="raw.githubusercontent.com/Kmk101team/kmkz/main/ssh"
+bzvpn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/ssh"
 
 # Link Hosting Kalian Untuk Xray
-bzvpnn="raw.githubusercontent.com/Kmk101team/kmkz/main/xray"
+bzvpnn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/xray"
 
 # Link Hosting Kalian Untuk Trojan Go
-bzvpnnn="raw.githubusercontent.com/Kmk101team/kmkz/main/trojango"
+bzvpnnn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/trojango"
 
 # Link Hosting Kalian Untuk Stunnel5
-bzvpnnnn="raw.githubusercontent.com/Kmk101team/kmkz/main/stunnel5"
+bzvpnnnn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/stunnel5"
 
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
