@@ -13,7 +13,7 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- icanhazip.com);
-IZIN=$( curl https://kmk101team.github.io/izin | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/Kulanbagong1/izinn/main/ip | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
 if [ $MYIP = $IZIN ]; then
 clear
@@ -30,6 +30,8 @@ clear
 echo "Checking VPS"
 clear
 domain=$(cat /etc/xray/domain)
+PUB=$(cat /etc/slowdns/server.pub)
+NS=$(cat /etc/xray/dns)
 clear
 read -p "Username : " Login
 read -p "Password : " Pass
@@ -60,8 +62,14 @@ echo -e "\E[44;1;39m          ⇱ Informasi SSH & OpenVPN ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "❇️ IP/Host       : $IP"
 echo -e "❇️ Domain        : ${domain}"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "❇️ Host Slowdns  : $NS"
+echo -e "❇️ Pub Key       : $PUB"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "❇️ Username      : $Login"
 echo -e "❇️ Password      : $Pass"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "❇️ SSH UDP       : 54-65535"
 echo -e "❇️ Dropbear      : 109, 143"
 echo -e "❇️ SSL/TLS       : $ssl"
 echo -e "❇️ Port Squid    : $sqd"
