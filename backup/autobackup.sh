@@ -72,12 +72,12 @@ echo " Autobackup Has Been Stopped"
 exit 0
 }
 clear
-echo -e "=============================="
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "     Autobackup Data $sts     "
-echo -e "=============================="
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "1. Start Autobackup"
 echo -e "2. Stop Autobackup"
-echo -e "=============================="
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 read -rp "Please Enter The Correct Number : " -e num
 if [[ "$num" = "1" ]]; then
 start
