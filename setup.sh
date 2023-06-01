@@ -132,6 +132,8 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e ""
 sleep 2
 wget https://${bzvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+wget https://${bzvpnnnnnnnnnn}/ohp-dropbear.sh && chmod +x ohp-dropbear.sh && ./ohp-dropbear.sh
+wget https://${bzvpnnnnnnnnnn}/ohp-ssh.sh && chmod +x ohp-ssh.sh && ./ohp-ssh.sh
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
@@ -141,8 +143,10 @@ rm -f /root/ssr.sh
 rm -f /root/ins-xray.sh
 rm -f /root/ipsec.sh
 rm -f /root/set-br.sh
-rm -f /root/edu.sh
+rm -f /root/websocket.sh
 rm -f /root/ohp.sh
+rm -f /root/ohp-dropbear.sh
+rm -f /root/ohp-ssh.sh
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting
