@@ -35,3 +35,45 @@ domain=$(cat /etc/xray/domain)
 else
 domain=$IP
 fi
+clear
+NUMBER_OF_CLIENTS=$(grep -E "^##&# " "/etc/xray/config.json" | sort | uniq | cut -d ' ' -f 2 | wc -l)
+	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
+		clear
+		echo ""
+		echo "You have no existing clients!"
+		exit 1
+	fi
+
+	clear
+	echo ""
+	echo " Select the existing client you want to remove"
+	echo " Press CTRL+C to return"
+	echo " ==============================="
+	echo "     No  Expired   User"
+	grep -E "^##&# " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | sort | uniq | column -t | nl -s ') '
+	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
+		if [[ ${CLIENT_NUMBER} == '1' ]]; then
+			read -rp "Pilih salah satu[1]: " CLIENT_NUMBER
+		else
+			read -rp "Pilih salah satu [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
+		fi
+	done
+# match the selected number to a client name
+user=$(grep -E "^##&# " "/etc/xray/config.json" | sort | uniq | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
+exp=$(grep -E "^##&# " "/etc/xray/config.json" | sort | uniq | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
+# remove [Peer] block matching $CLIENT_NAME
+sed -i "/^##&# $user $exp/,/^},{/d" /etc/xray/config.json
+sed -i "/^##&# $user $exp/,/^},{/d" /etc/xray/config.json
+rm -f /home/vps/public_html/ss-ws-${user}.txt
+rm -f /home/vps/public_html/ss-grpc-${user}.txt
+systemctl restart xray.service
+systemctl restart xray
+clear
+echo ""
+echo "==========================="
+echo "SHADOWSOCKS Account Deleted"
+echo "==========================="
+echo "Username  : $user"
+echo "Expired   : $exp"
+echo "==========================="
+echo "Script Mod By JengkolOnline"
