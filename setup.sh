@@ -19,25 +19,25 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Link Hosting Kalian Untuk Ssh Vpn
-bzvpn="raw.githubusercontent.com/Kmk101team/kmkz/main/ssh"
+bzvpn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/ssh"
 # Link Hosting Kalian Untuk Sstp
-bzvpnn="raw.githubusercontent.com/Kmk101team/kmkz/main/sstp"
+bzvpnn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/sstp"
 # Link Hosting Kalian Untuk Ssr
-bzvpnnn="raw.githubusercontent.com/Kmk101team/kmkz/main/ssr"
+bzvpnnn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/ssr"
 # Link Hosting Kalian Untuk Shadowsocks
-bzvpnnnn="raw.githubusercontent.com/Kmk101team/kmkz/main/shadowsocks"
+bzvpnnnn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/shadowsocks"
 # Link Hosting Kalian Untuk Wireguard
-bzvpnnnnn="raw.githubusercontent.com/Kmk101team/kmkz/main/wireguard"
+bzvpnnnnn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/wireguard"
 # Link Hosting Kalian Untuk Xray
-bzvpnnnnnn="raw.githubusercontent.com/Kmk101team/kmkz/main/xray"
+bzvpnnnnnn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/xray"
 # Link Hosting Kalian Untuk Ipsec
-bzvpnnnnnnn="raw.githubusercontent.com/Kmk101team/kmkz/main/ipsec"
+bzvpnnnnnnn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/ipsec"
 # Link Hosting Kalian Untuk Backup
-bzvpnnnnnnnn="raw.githubusercontent.com/Kmk101team/kmkz/main/backup"
+bzvpnnnnnnnn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/backup"
 # Link Hosting Kalian Untuk Websocket
-bzvpnnnnnnnnn="raw.githubusercontent.com/Kmk101team/kmkz/main/websocket"
+bzvpnnnnnnnnn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/websocket"
 # Link Hosting Kalian Untuk Ohp
-bzvpnnnnnnnnnn="raw.githubusercontent.com/Kmk101team/kmkz/main/ohp"
+bzvpnnnnnnnnnn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/ohp"
 
 # Getting
 echo -e ""
@@ -123,7 +123,7 @@ echo -e "\E[44;1;39m          ⇱ INSTALL WEBSOCKET ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 sleep 2
-wget https://${bzvpnnnnnnnnn}/edu.sh && chmod +x edu.sh && ./edu.sh
+wget https://${bzvpnnnnnnnnn}/websocket.sh && chmod +x websocket.sh && ./websocket.sh
 # Ohp Server
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
