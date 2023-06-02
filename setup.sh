@@ -209,11 +209,12 @@ bash /tmp/nameserver | tee /root/install.log
 clear
 echo " "
 echo "Installation has been completed!!"echo " "
-echo "============================================================================" | tee -a log-install.txt
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo "" | tee -a log-install.txt
-echo "----------------------------------------------------------------------------" | tee -a log-install.txt
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo ""  | tee -a log-install.txt
-echo "   >>> Service & Port"  | tee -a log-install.txt
+echo "   - Service & Port"  | tee -a log-install.txt
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo "   - OpenSSH                 : 443, 22"  | tee -a log-install.txt
 echo "   - OpenVPN                 : TCP 1194, UDP 2200, SSL 990"  | tee -a log-install.txt
 echo "   - Stunnel5                : 443, 445, 777"  | tee -a log-install.txt
