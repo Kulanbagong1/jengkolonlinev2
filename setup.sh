@@ -218,7 +218,7 @@ echo " "
 echo "Installation has been completed!!"echo " "
 echo "============================================================================" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
-echo "   >>> Service & Port"  | tee -a log-install.txt
+#echo "   >>> Service & Port"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "    [INFORMASI SSH & OpenVPN]" | tee -a log-install.txt
 #echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
