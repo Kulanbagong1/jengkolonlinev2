@@ -43,8 +43,8 @@ bzvpnnnnnnnnnn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/ohp"
 # Getting
 echo -e ""
 #echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-$echo -e "\E[44;1;39m          ⇱ SCRIPT BY @JengkolOnline ⇲          \E[0m"
-$echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+#echo -e "\E[44;1;39m          ⇱ SCRIPT BY @JengkolOnline ⇲          \E[0m"
+#echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 #echo -e ""
 #sleep 1
 MYIP=$(wget -qO- icanhazip.com);
@@ -200,7 +200,7 @@ RemainAfterExit=yes
 
 [Install]
 WantedBy=multi-user.target
-
+EOF
 systemctl daemon-reload
 systemctl enable autosett
 wget -O /etc/set.sh "https://${bzvpn}/set.sh"
