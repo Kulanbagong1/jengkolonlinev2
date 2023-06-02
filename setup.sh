@@ -181,7 +181,9 @@ echo "   - Stunnel5                : 443, 445, 777"  | tee -a log-install.txt
 echo "   - Dropbear                : 443, 109, 143"  | tee -a log-install.txt
 echo "   - Squid Proxy             : 3128, 8080"  | tee -a log-install.txt
 echo "   - Badvpn                  : 7100, 7200, 7300"  | tee -a log-install.txt
-echo "   - Nginx                   : 89"  | tee -a log-install.txt
+echo "   - Nginx                   : 81"  | tee -a log-install.txt
+echo "   - DNS Client              : 443, 53, 2222" | tee -a log-install.txt
+echo "   - DNS Server              : 443, 88" | tee -a log-install.txt
 echo "   - Wireguard               : 7070"  | tee -a log-install.txt
 echo "   - L2TP/IPSEC VPN          : 1701"  | tee -a log-install.txt
 echo "   - PPTP VPN                : 1732"  | tee -a log-install.txt
@@ -189,18 +191,25 @@ echo "   - SSTP VPN                : 444"  | tee -a log-install.txt
 echo "   - Shadowsocks-R           : 1443-1543"  | tee -a log-install.txt
 echo "   - SS-OBFS TLS             : 2443-2543"  | tee -a log-install.txt
 echo "   - SS-OBFS HTTP            : 3443-3543"  | tee -a log-install.txt
-echo "   - XRAYS Vmess TLS         : 8443"  | tee -a log-install.txt
+echo "   - XRAYS Vmess TLS         : 443"  | tee -a log-install.txt
 echo "   - XRAYS Vmess None TLS    : 80"  | tee -a log-install.txt
-echo "   - XRAYS Vless TLS         : 8443"  | tee -a log-install.txt
+echo "   - XRAYS Vmess GRPC        : 443" | tee -a log-install.txt
+echo "   - XRAYS Vless TLS         : 443"  | tee -a log-install.txt
 echo "   - XRAYS Vless None TLS    : 80"  | tee -a log-install.txt
-echo "   - XRAYS Trojan            : 2083"  | tee -a log-install.txt
-echo "   - Websocket TLS           : 443"  | tee -a log-install.txt
-echo "   - Websocket None TLS      : 8880"  | tee -a log-install.txt
+echo "   - XRAYS Vless GRPC        : 443" | tee -a log-install.txt
+echo "   - XRAYS Trojan TLS        : 443" | tee -a log-install.txt
+echo "   - XRAYS Trojan None TLS.  : 80" | tee -a log-install.txt
+echo "   - XRAYS Trojan GRPC       : 443" | tee -a log-install.txt
+echo "   - Sowdowsoks TLS          : 443" | tee -a log-install.txt
+echo "   - Sowdowsoks None TLS     : 80" | tee -a log-install.txt
+echo "   - Sowdowsoks GRPC         : 443" | tee -a log-install.txt
+echo "   - Websocket TLS           : 443, 2096"  | tee -a log-install.txt
+echo "   - Websocket None TLS      : 80, 8880"  | tee -a log-install.txt
 echo "   - Websocket Ovpn          : 2086"  | tee -a log-install.txt
-echo "   - OHP SSH                 : 8181"  | tee -a log-install.txt
-echo "   - OHP Dropbear            : 8282"  | tee -a log-install.txt
-echo "   - OHP OpenVPN             : 8383"  | tee -a log-install.txt
-echo "   - Tr Go                   : 2087"  | tee -a log-install.txt
+echo "   - OHP SSH                 : 8585"  | tee -a log-install.txt
+echo "   - OHP Dropbear            : 8686"  | tee -a log-install.txt
+echo "   - OHP OpenVPN             : 8787"  | tee -a log-install.txt
+echo "   - Trojan Go               : 443"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
 echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
