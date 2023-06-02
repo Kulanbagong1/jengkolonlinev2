@@ -41,7 +41,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^##&# " "/etc/xray/config.json")
 	echo ""
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo -e "==============================="
+	echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 	grep -E "^##&# " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | sort | uniq | column -t | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -56,12 +56,12 @@ exp=$(grep -E "^##&# " "/etc/xray/config.json" | sort | uniq | cut -d ' ' -f 3 |
 
 clear
 echo ""
-echo -e "==============================="
+echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo -e "      Account Information"
-echo -e "==============================="
+echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo -e "Username : $user "
 echo -e "Expired  : $exp"
-echo -e "==============================="
+echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 read -p "Add Expired (Days): " masaaktif
 echo -e "Please Wait...."
 sleep 3
@@ -77,10 +77,10 @@ systemctl restart xray.service
 service cron restart
 clear
 echo ""
-echo "==============================="
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo "  SHADOWSOCKS Account Renewed  "
-echo "==============================="
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo "Username  : $user"
 echo "Expired   : $exp4"
-echo "==============================="
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo "Script MOD By JengkolOnline"
