@@ -103,8 +103,8 @@ sleep 4
 mkdir /var/lib/bzstorevpn;
 echo "IP=" >> /var/lib/bzstorevpn/ipvps.conf
 echo ""
-wget -q https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/tools.sh;chmod +x tools.sh;./tools.sh
-rm tools.sh
+#wget -q https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/tools.sh;chmod +x tools.sh;./tools.sh
+#rm tools.sh
 clear
 wget https://${bzvpn}/cf.sh && chmod +x cf.sh && ./cf.sh
 #install v2ray
