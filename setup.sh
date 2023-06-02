@@ -48,30 +48,45 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e ""
 sleep 2
 MYIP=$(wget -qO- icanhazip.com);
-IZIN=$( curl https://raw.githubusercontent.com/Kulanbagong1/izinn/main/ip | grep $MYIP )
-echo "Memeriksa Hak Akses VPS..."
+VALIDITY() {
+    today=$(date -d "0 days" +"%Y-%m-%d")
+    Exp1=$(curl https://raw.githubusercontent.com/Kulanbagong1/izinn/main/ip | grep $MYIP | awk '{print $4}')
+    if [[ $today < $Exp1 ]]; then
+        echo -e "\e[32mAUTOSCRIPT SUKSES..\e[0m"
+        sleep 5
+    else
+    echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo -e "                PERMISSION DENIED ! "
+    echo -e "     Your VPS ${NC}( ${green}$ISP${NC} ) ${YELLOW}Has been Banned "
+    echo -e "         Buy access permissions for scripts "
+    echo -e "                 Contact Admin :"
+    echo -e "             ${green}Telegram t.me/Jengkol_Online "
+    echo -e "             WhatsApp wa.me/6282372139631"
+    echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    exit 0
+    fi
+}
+IZIN=$(curl https://raw.githubusercontent.com/rizkihdyt6/izinsc/main/ip | awk '{print $5}' | grep $MYIP)
 if [ $MYIP = $IZIN ]; then
-clear
-echo -e "${CYAN}Akses Diizinkan...${off}"
-sleep 1
+echo -e "\e[32mPERMISSION ACCEPT BOSS...\e[0m"
+    VALIDITY
 else
-clear
-echo -e "${PURPLE}Akses Diblokir!${off}"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "$Lyellow                ⚡ PREMIUM SPEED SCRIPT ⚡"$NC
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo "Hanya Untuk Pengguna Berbayar!"
-echo "Silahkan Hubungi Admin"
-#echo -e "$Lyellow                    CONTACT TELEGRAM"$NC
-#echo -e "$Lyellow               https://t.me/Jengkol_Online"$NC
-echo -e "CONTACT WA"
-echo -e "https://w.me/6282372139631"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-exit 0
+    echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo -e "                PERMISSION DENIED ! "
+    echo -e "     Your VPS ${NC}( ${green}$ISP${NC} ) ${YELLOW}Has been Banned "
+    echo -e "         Buy access permissions for scripts "
+    echo -e "                 Contact Admin :"
+    echo -e "             ${green}Telegram t.me/Jengkol_Online "
+    echo -e "             WhatsApp wa.me/6282372139631
+    echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    echo ""
+    rm -f setup.sh
+    exit 0
 fi
 clear
-echo "Checking VPS"
+echo -e "\e[32mloading...\e[0m"
 clear
+
 sleep 2
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
