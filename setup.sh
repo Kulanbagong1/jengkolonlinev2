@@ -103,8 +103,8 @@ sleep 4
 mkdir /var/lib/bzstorevpn;
 echo "IP=" >> /var/lib/bzstorevpn/ipvps.conf
 echo ""
-#wget -q https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/tools.sh;chmod +x tools.sh;./tools.sh
-#rm tools.sh
+wget -q https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/tools.sh;chmod +x tools.sh;./tools.sh
+rm tools.sh
 clear
 wget https://${bzvpn}/cf.sh && chmod +x cf.sh && ./cf.sh
 #install v2ray
@@ -213,7 +213,7 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 echo "" | tee -a log-install.txt
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "   - Service & Port"  | tee -a log-install.txt
+echo "   - Service  Port"  | tee -a log-install.txt
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a log-install.txt
 echo "   - OpenSSH                 : 443, 22"  | tee -a log-install.txt
 echo "   - OpenVPN                 : TCP 1194, UDP 2200, SSL 990"  | tee -a log-install.txt
@@ -252,7 +252,7 @@ echo "   - OHP OpenVPN             : 8787"  | tee -a log-install.txt
 echo "   - Trojan Go               : 443"  | tee -a log-install.txt
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "   - Server Information & Other Features"  | tee -a log-install.txt
+echo "   - Server Information  Other Features"  | tee -a log-install.txt
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a log-install.txt
 echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
 echo "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
