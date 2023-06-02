@@ -36,8 +36,8 @@ else
 domain=$IP
 fi
 uuid=$(cat /proc/sys/kernel/random/uuid)
-tls="$(cat ~/log-install.txt | grep -w "XRAYS SHADOWSOCKS WS TLS " | cut -d: -f2|sed 's/ //g')"
-nontls="$(cat ~/log-install.txt | grep -w "XRAYS SHADOWSOCKS WS HTTP " | cut -d: -f2|sed 's/ //g')"
+tls="$(cat ~/log-install.txt | grep -w "Sowdowsoks TLS " | cut -d: -f2|sed 's/ //g')"
+nontls="$(cat ~/log-install.txt | grep -w "Sowdowsoks None TLS " | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "Username : " -e user
 		CLIENT_EXISTS=$(grep -E "^##&# ${user}" "/etc/xray/config.json" | sort | uniq | cut -d ' ' -f 2 | wc -l)
