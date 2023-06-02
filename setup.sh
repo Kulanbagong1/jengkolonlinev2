@@ -46,7 +46,7 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[44;1;39m          ⇱ SCRIPT BY @JengkolOnline ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
-sleep 2
+sleep 1
 MYIP=$(wget -qO- icanhazip.com);
 VALIDITY() {
     today=$(date -d "0 days" +"%Y-%m-%d")
@@ -218,9 +218,8 @@ echo " "
 echo "Installation has been completed!!"echo " "
 echo "============================================================================" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
-'echo "   >>> Service & Port"  | tee -a log-install.txt'
+echo "   Service & Port"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "    [INFORMASI SSH & OpenVPN]" | tee -a log-install.txt
 #echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo "   - OpenSSH                 : 443, 22"  | tee -a log-install.txt
 echo "   - OpenVPN                 : TCP 1194, UDP 2200, SSL 990"  | tee -a log-install.txt
@@ -258,7 +257,7 @@ echo "   - OHP Dropbear            : 8686"  | tee -a log-install.txt
 echo "   - OHP OpenVPN             : 8787"  | tee -a log-install.txt
 echo "   - Trojan Go               : 443"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
+echo "    Server Information & Other Features"  | tee -a log-install.txt
 echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
 echo "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
 echo "   - Dflate                  : [ON]"  | tee -a log-install.txt
