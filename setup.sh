@@ -209,11 +209,11 @@ history -c
 echo "1.2" > /home/ver
 echo " "
 echo "Installation has been completed!!"echo " "
-echo "============================================================================" | tee -a log-install.txt
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
-echo "----------------------------------------------------------------------------" | tee -a log-install.txt
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "   > Service & Port"  | tee -a log-install.txt
+echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH                 : 443, 22"  | tee -a log-install.txt
 echo "   - OpenVPN                 : TCP 1194, UDP 2200, SSL 990"  | tee -a log-install.txt
 echo "   - Stunnel5                : 443, 445, 777"  | tee -a log-install.txt
@@ -250,7 +250,7 @@ echo "   - OHP Dropbear            : 8686"  | tee -a log-install.txt
 echo "   - OHP OpenVPN             : 8787"  | tee -a log-install.txt
 echo "   - Trojan Go               : 443"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "   > Server Information & Other Features"  | tee -a log-install.txt
+echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
 echo "   - Timezone                : Asia/Jakarta GMT +7"  | tee -a log-install.txt
 echo "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
 echo "   - Dflate                  : [ON]"  | tee -a log-install.txt
