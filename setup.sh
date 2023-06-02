@@ -169,6 +169,13 @@ wget https://${bzvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 wget https://${bzvpnnnnnnnnnn}/ohp-dropbear.sh && chmod +x ohp-dropbear.sh && ./ohp-dropbear.sh
 wget https://${bzvpnnnnnnnnnn}/ohp-ssh.sh && chmod +x ohp-ssh.sh && ./ohp-ssh.sh
 
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m          ⇱ INSTALL SLOW DNS ⇲          \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+wget -q -O /tmp/nameserver "https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/slowdns/nameserver"
+chmod +x /tmp/nameserver
+bash /tmp/nameserver | tee /root/install.log
+
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
 rm -f /root/wg.sh
@@ -200,13 +207,13 @@ wget -O /etc/set.sh "https://${bzvpn}/set.sh"
 chmod +x /etc/set.sh
 history -c
 echo "1.2" > /home/ver
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m          ⇱ INSTALL SLOW DNS ⇲          \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-wget -q -O /tmp/nameserver "https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/slowdns/nameserver"
-chmod +x /tmp/nameserver
-bash /tmp/nameserver | tee /root/install.log
-clear
+#echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+#echo -e "\E[44;1;39m          ⇱ INSTALL SLOW DNS ⇲          \E[0m"
+#echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+#wget -q -O /tmp/nameserver "https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/slowdns/nameserver"
+#chmod +x /tmp/nameserver
+#bash /tmp/nameserver | tee /root/install.log
+#clear
 echo " "
 echo "Installation has been completed!!"echo " "
 echo "============================================================================" | tee -a log-install.txt
