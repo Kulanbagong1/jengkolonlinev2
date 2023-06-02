@@ -37,9 +37,9 @@ UPDATE="https://raw.githubusercontent.com/Kulanbagong1/scvps/main/"
 BOT="https://raw.githubusercontent.com/rizkihdyt6/Panel/main/"
 Repo1="https://raw.githubusercontent.com/Kulanbagong1/izinn/main/"
 UDPCORE="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2"
-ISP=$(cat /etc/xray/isp)
+#ISP=$(cat /etc/xray/isp)
 NS=$(cat /etc/xray/dns)
-CITY=$(cat /etc/xray/city)
+#CITY=$(cat /etc/xray/city)
 IPVPS=$(curl -s ipv4.icanhazip.com)
 domain=$(cat /etc/xray/domain)
 RAM=$(free -m | awk 'NR==2 {print $2}')
