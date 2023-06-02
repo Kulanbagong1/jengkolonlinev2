@@ -506,11 +506,14 @@ iptables-save > /etc/iptables.up.rules
 iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
 netfilter-persistent reload
-systemctl daemon-reload
-systemctl stop trojan-go
-systemctl start trojan-go
-systemctl enable trojan-go
-systemctl restart trojan-go
+systemctl daemon-reload.service
+systemctl stop trojan-go.service
+systemctl start trojan-go.service
+systemctl enable trojan-go.service
+systemctl restart trojan-go.service
 
 cd
-cp /root/domain /etc/xray
+rm -f ins-xray.sh
+cp /root/domain /etc/xray/domain
+sleep 1
+clear
