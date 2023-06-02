@@ -57,7 +57,7 @@ VALIDITY() {
     else
     echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     echo -e "                PERMISSION DENIED ! "
-    echo -e "     Your VPS ${NC}( ${green}$ISP${NC} ) ${YELLOW}Has been Banned "
+    echo -e "     Your VPS ${NC}( ${green}$MYIP${NC} ) ${YELLOW}Has been Banned "
     echo -e "         Buy access permissions for scripts "
     echo -e "                 Contact Admin :"
     echo -e "             ${green}Telegram t.me/Jengkol_Online "
@@ -73,7 +73,7 @@ echo -e "\e[32mPERMISSION ACCEPT BOSS...\e[0m"
 else
     echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     echo -e "                PERMISSION DENIED ! "
-    echo -e "     Your VPS ${NC}( ${green}$ISP${NC} ) ${YELLOW}Has been Banned "
+    echo -e "     Your VPS ${NC}( ${green}$MYIP${NC} ) ${YELLOW}Has been Banned "
     echo -e "         Buy access permissions for scripts "
     echo -e "                 Contact Admin :"
     echo -e "             ${green}Telegram t.me/Jengkol_Online "
