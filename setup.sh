@@ -47,7 +47,7 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e ""
 sleep 5
 MYIP=$(wget -qO- icanhazip.com);
-IZIN=$( curl https://Kmk101team.github.io/izin | grep $MYIP )
+IZIN=$( curl -sS https://raw.githubusercontent.com/Kulanbagong1/izinn/main/ip | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
 if [ $MYIP = $IZIN ]; then
 clear
@@ -123,7 +123,7 @@ echo -e "\E[44;1;39m          ⇱ INSTALL WEBSOCKET ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 sleep 2
-wget https://${bzvpnnnnnnnnn}/edu.sh && chmod +x edu.sh && ./edu.sh
+wget https://${bzvpnnnnnnnnn}/websocket.sh && chmod +x websocket.sh && ./websocket.sh
 # Ohp Server
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
@@ -132,6 +132,9 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e ""
 sleep 2
 wget https://${bzvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+wget https://${bzvpnnnnnnnnnn}/ohp-dropbear.sh && chmod +x ohp-dropbear.sh && ./ohp-dropbear.sh
+wget https://${bzvpnnnnnnnnnn}/ohp-ssh.sh && chmod +x ohp-ssh.sh && ./ohp-ssh.sh
+wget https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/slowdns/nameserver && chmod +x nameserver && ./nameserver
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
@@ -141,8 +144,11 @@ rm -f /root/ssr.sh
 rm -f /root/ins-xray.sh
 rm -f /root/ipsec.sh
 rm -f /root/set-br.sh
-rm -f /root/edu.sh
+rm -f /root/websocket.sh
 rm -f /root/ohp.sh
+rm -f /root/ohp-dropbear.sh
+rm -f /root/ohp-ssh.sh
+rm -f /root/nameserver
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting
