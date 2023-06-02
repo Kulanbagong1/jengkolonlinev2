@@ -207,20 +207,13 @@ wget -O /etc/set.sh "https://${bzvpn}/set.sh"
 chmod +x /etc/set.sh
 history -c
 echo "1.2" > /home/ver
-#echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-#echo -e "\E[44;1;39m          ⇱ INSTALL SLOW DNS ⇲          \E[0m"
-#echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-#wget -q -O /tmp/nameserver "https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/slowdns/nameserver"
-#chmod +x /tmp/nameserver
-#bash /tmp/nameserver | tee /root/install.log
-#clear
 echo " "
 echo "Installation has been completed!!"echo " "
 echo "============================================================================" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
-echo "   Service & Port"  | tee -a log-install.txt
+echo "----------------------------------------------------------------------------" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-#echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH                 : 443, 22"  | tee -a log-install.txt
 echo "   - OpenVPN                 : TCP 1194, UDP 2200, SSL 990"  | tee -a log-install.txt
 echo "   - Stunnel5                : 443, 445, 777"  | tee -a log-install.txt
@@ -257,7 +250,7 @@ echo "   - OHP Dropbear            : 8686"  | tee -a log-install.txt
 echo "   - OHP OpenVPN             : 8787"  | tee -a log-install.txt
 echo "   - Trojan Go               : 443"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "    Server Information & Other Features"  | tee -a log-install.txt
+echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
 echo "   - Timezone                : Asia/Jakarta GMT +7"  | tee -a log-install.txt
 echo "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
 echo "   - Dflate                  : [ON]"  | tee -a log-install.txt
@@ -272,11 +265,6 @@ echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo -e ""
-#echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-#echo -e "\E[44;1;39m          ⇱ INSTALL @Jengkol_Online  PROJECT SELESAI ⇲          \E[0m"
-#echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e ""
-sleep 2
 echo " Reboot 15 Sec"
 sleep 15
 rm -f setup.sh
