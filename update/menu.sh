@@ -96,7 +96,7 @@ echo -e "\033[96m─────────────────────
 echo -e "   ${grenbo}[13]❇️${NC} ${YELL}CEK SERVICE VPS${NC}    | ${grenbo}[16]❇️${NC} ${YELL}EDIT PROT V2RAY${NC}"
 echo -e "   ${grenbo}[14]❇️${NC} ${YELL}PENGGATURAN${NC}        | ${grenbo}[17]❇️${NC} ${YELL}ADD NOTIF BOT${NC}"
 echo -e "   ${grenbo}[15]❇️${NC} ${YELL}CEK V2RAY${NC}          | ${grenbo}[18]❇️${NC} ${YELL}ADD BOT PANEL${NC}"
-echo -e "   ${grenbo}[19]❇️${NC} ${YELL}INSTALL UDP${NC}"
+echo -e "   ${grenbo}[19]❇️${NC} ${YELL}INSTALL UDP${NC}        | ${grenbo}[20]❇️${NC} ${YELL}CEKER RUNNING${NC}"
 echo -e "\033[96m────────────────────────────────────────────────────────────${NC}"
 echo -e "\e[1;97m                    NEWBIE TUNNEL              \e[0m"
 echo -e "\033[96m────────────────────────────────────────────────────────────${NC}"
@@ -166,6 +166,9 @@ case $menu in
    ;;
 12) clear ;
   ssmenu
+   ;;
+20) clear ;
+   running
    ;;
 x) clear ;
    exit
