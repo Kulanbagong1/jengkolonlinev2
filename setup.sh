@@ -92,7 +92,7 @@ echo -e "\E[44;1;39m          ⇱ INSTALL V2RAY ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 sleep 2
-wget https://${Repo}/xray/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
+wget -O https://${Repo}/xray/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
 #install ssh ovpn
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
@@ -100,8 +100,8 @@ echo -e "\E[44;1;39m          ⇱ INSTALL SSH-CDN ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 sleep 2
-wget https://${Repo}/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
-wget https://${Repo}/sstp/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
+wget -O https://${Repo}/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget -O https://${Repo}/sstp/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
 #install ssr
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
@@ -109,8 +109,8 @@ echo -e "\E[44;1;39m          ⇱ INSTALL SSR ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 sleep 2
-wget https://${Repo}/ssr/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
-wget https://${Repo}/shadowsocks/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
+wget -O https://${Repo}/ssr/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
+wget -O https://${Repo}/shadowsocks/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 #installwg
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
@@ -118,7 +118,7 @@ echo -e "\E[44;1;39m          ⇱ INSTALL WG ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 sleep 2
-wget https://${Repo}/wireguard/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
+wget -O https://${Repo}/wireguard/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
 #install L2TP
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
@@ -126,8 +126,8 @@ echo -e "\E[44;1;39m          ⇱ INSTALL L2TP ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 sleep 2
-wget https://${Repo}/ipsec/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
-wget https://${Repo}/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget -O https://${Repo}/ipsec/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
+wget -O https://${Repo}/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 # Websocket
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
@@ -135,7 +135,7 @@ echo -e "\E[44;1;39m          ⇱ INSTALL WEBSOCKET ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 sleep 2
-wget https://${Repo}/websocket/websocket.sh && chmod +x websocket.sh && ./websocket.sh
+wget -O https://${Repo}/websocket/websocket.sh && chmod +x websocket.sh && ./websocket.sh
 # Ohp Server
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
@@ -143,14 +143,14 @@ echo -e "\E[44;1;39m          ⇱ INSTALL OHP ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 sleep 2
-wget https://${Repo}/ohp/ohp.sh && chmod +x ohp.sh && ./ohp.sh
-wget https://${Repo}/ohp/ohp-dropbear.sh && chmod +x ohp-dropbear.sh && ./ohp-dropbear.sh
-wget https://${Repo}/ohp/ohp-ssh.sh && chmod +x ohp-ssh.sh && ./ohp-ssh.sh
+wget -O https://${Repo}/ohp/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+wget -O https://${Repo}/ohp/ohp-dropbear.sh && chmod +x ohp-dropbear.sh && ./ohp-dropbear.sh
+wget -O https://${Repo}/ohp/ohp-ssh.sh && chmod +x ohp-ssh.sh && ./ohp-ssh.sh
 
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m          ⇱ INSTALL SLOW DNS ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-wget https://${Repo}/slowdns/nameserver && chmod +x nameserver && ./nameserver
+wget -O https://${Repo}/slowdns/nameserver && chmod +x nameserver && ./nameserver
 
 
 
