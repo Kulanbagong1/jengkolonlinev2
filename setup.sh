@@ -77,7 +77,7 @@ else
     echo -e "         Buy access permissions for scripts "
     echo -e "                 Contact Admin :"
     echo -e "             ${green}Telegram t.me/Jengkol_Online "
-    echo -e "             WhatsApp wa.me/6282372139631
+    echo -e "             WhatsApp wa.me/6282372139631"
     echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     echo ""
     rm -f setup.sh
