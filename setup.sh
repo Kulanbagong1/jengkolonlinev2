@@ -46,18 +46,14 @@ echo -e "\E[44;1;39m          ⇱ SCRIPT BY @jengkolonline ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 sleep 5
-MYIP=$(wget -qO- icanhazip.com);
-IZIN=$( curl -sS https://raw.githubusercontent.com/Kulanbagong1/izinn/main/ip | grep $MYIP )
-echo "Memeriksa Hak Akses VPS..."
-if [ $MYIP = $IZIN ]; then
+MYIP=$(wget -qO- ipinfo.io/ip);
+echo "Checking VPS"
+IZIN=$(wget -qO- ipinfo.io/ip);
+
+rm -f setup.sh
 clear
-echo -e "${CYAN}Akses Diizinkan...${off}"
-sleep 1
-else
-clear
-echo -e "${PURPLE}Akses Diblokir!${off}"
-echo "Hanya Untuk Pengguna Berbayar!"
-echo "Silahkan Hubungi Admin"
+if [ -f "/etc/xray/domain" ]; then
+echo "Script Already Installed"
 exit 0
 fi
 clear
