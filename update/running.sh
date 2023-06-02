@@ -1,57 +1,201 @@
-#!/bin/bash
-GREEN='\033[0;32m'
-PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
-NC='\033[0m'
-yl='\e[32;1m'
-bl='\e[36;1m'
-gl='\e[32;1m'
-rd='\e[31;1m'
-mg='\e[0;95m'
-blu='\e[34m'
-op='\e[35m'
-or='\033[1;33m'
-bd='\e[1m'
-color1='\e[031;1m'
-color2='\e[34;1m'
-color3='\e[0m'
-# Getting
-# IP Validation
-dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
-biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
-#########################
+export red="\e[1;31m"
+export green="\e[0;32m"
+export NC="\e[0m"
 
-MYIP=$(curl -sS ipinfo.io/ip)
-
-red='\e[1;31m'
-green='\e[1;32m'
-NC='\e[0m'
-green() { echo -e "\\033[32;1m${*}\\033[0m"; }
-red() { echo -e "\\033[31;1m${*}\\033[0m"; }
-PERMISSION
+# // GIT USER
+export GitUser="Kulanbagong1"
+export MYIP=$(wget -qO- icanhazip.com);
+#source /var/lib/premium-script/ipvps.conf
+# // VPS INFO
 clear
+Checkstart1=$(ip route | grep default | cut -d ' ' -f 3 | head -n 1);
+if [[ $Checkstart1 == "venet0" ]]; then 
+    clear
+    lan_net="venet0"
+    typevps="OpenVZ"
+    sleep 1
+else
+    clear
+    lan_net="eth0"
+    typevps="KVM"
+    sleep 1
+fi
 
-# GETTING OS INFORMATION
-source /etc/os-release
-Versi_OS=$VERSION
-ver=$VERSION_ID
-Tipe=$NAME
-URL_SUPPORT=$HOME_URL
-basedong=$ID
-
-# VPS ISP INFORMATION
-#ITAM='\033[0;30m'
+# // VPS ISP INFORMATION
+echo -e "\e[32mloading...\e[0m"
+clear
+#Domain
+#IP=$(wget -qO- icanhazip.com);
+#source /var/lib/premium-script/ipvps.conf
+#if [[ "$IP" = "" ]]; then
+#domain=$(cat /usr/local/etc/xray/domain)"
+#else
+#domain=$IP
+#fi
+export ITAM='\033[0;30m'
 echo -e "$ITAM"
-#REGION=$( curl -s ipinfo.io/region )
-#clear
-#COUNTRY=$( curl -s ipinfo.io/country )
-#clear
-#WAKTU=$( curl -s ipinfo.ip/timezone )
-#clear
-CITY=$( curl -s ipinfo.io/city )
-#clear
-#REGION=$( curl -s ipinfo.io/region )
-#clear
+export NAMAISP=$( curl -s ipinfo.io/org | cut -d " " -f 2-10  )
+export REGION=$( curl -s ipinfo.io/region )
+export COUNTRY=$( curl -s ipinfo.io/country )
+export WAKTU=$( curl -s ipinfo.ip/timezone )
+export CITY=$( curl -s ipinfo.io/city )
+export REGION=$( curl -s ipinfo.io/region )
+export WAKTUE=$( curl -s ipinfo.io/timezone )
+export koordinat=$( curl -s ipinfo.io/loc )
+
+# // TOTAL RAM
+export tram=$( free -m | awk 'NR==2 {print $2}' )
+export uram=$( free -m | awk 'NR==2 {print $3}' )
+export fram=$( free -m | awk 'NR==2 {print $4}' )
+export swap=$( free -m | awk 'NR==4 {print $2}' )
+
+# // USERNAME
+echo -e "$NC"
+rm -f /usr/bin/user
+export username=$( curl -sS https://raw.githubusercontent.com/Kulanbagong1/izinn/main/ip | grep $MYIP | awk '{print $2}' )
+echo "$username" > /usr/bin/user
+
+# // ORDER ID
+#rm -f /usr/bin/ver
+#export user=$( curl -sS https://raw.githubusercontent.com/${GitUser}/izinn/main/ipvps.conf | grep $MYIP | awk '{print $3}' )
+#echo "$user" > /usr/bin/ver
+
+# // VALIDITY
+rm -f /usr/bin/e
+export valid=$( curl -sS https://raw.githubusercontent.com/Kulanbagong1/izinn/main/ip | grep $MYIP | awk '{print $4}' )
+echo "$valid" > /usr/bin/e
+
+# // DETAIL ORDER
+export username=$(cat /usr/bin/user)
+#export oid=$(cat /usr/bin/ver)
+export exp=$(cat /usr/bin/e)
+
+# // TYPE PROCS
+export totalcore="$(grep -c "^processor" /proc/cpuinfo)" 
+export totalcore+=" Core"
+export corediilik="$(grep -c "^processor" /proc/cpuinfo)" 
+export tipeprosesor="$(awk -F ': | @' '/model name|Processor|^cpu model|chip type|^cpu type/ {
+                        printf $2;
+                        exit
+                        }' /proc/cpuinfo)"
+
+# // SHELL VER
+export shellversion=""
+export shellversion=Bash
+export shellversion+=" Version" 
+export shellversion+=" ${BASH_VERSION/-*}" 
+export versibash=$shellversion
+
+# // OS INFO
+source /etc/os-release
+export Versi_OS=$VERSION
+export ver=$VERSION_ID
+export Tipe=$NAME
+export URL_SUPPORT=$HOME_URL
+export basedong=$ID
+
+# // DOWNLOAD
+export download=`grep -e "lo:" -e "wlan0:" -e "eth0" /proc/net/dev  | awk '{print $2}' | paste -sd+ - | bc`
+export downloadsize=$(($download/1073741824))
+
+# // UPLOAD
+export upload=`grep -e "lo:" -e "wlan0:" -e "eth0" /proc/net/dev | awk '{print $10}' | paste -sd+ - | bc`
+export uploadsize=$(($upload/1073741824))
+
+# // CPU INFO
+export cpu_usage1="$(ps aux | awk 'BEGIN {sum=0} {sum+=$3}; END {print sum}')"
+export cpu_usage="$((${cpu_usage1/\.*} / ${corediilik:-1}))"
+export cpu_usage+=" %"
+
+# // OS UPTIME
+export uptime="$(uptime -p | cut -d " " -f 2-10)"
+
+# // KERNEL
+export kernelku=$(uname -r)
+
+# // DATE
+export harini=`date -d "0 days" +"%d-%m-%Y"`
+export jam=`date -d "0 days" +"%X"`
+
+# // DNS PATH
+export tipeos2=$(uname -m)
+
+#Domain
+#IP=$(wget -qO- icanhazip.com);
+#source /var/lib/premium-script/ipvps.conf
+#if [[ "$IP" = "" ]]; then
+domain=$(cat /etc/xray/domain)"
+#else"
+#domain=$IP
+#fi
+
+echo -e "\e[32mloading...\e[0m"
+clear
+echo -e ""
+echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo -e "Your VPS Information :"
+echo -e "\e[0;32mSCRIPT VPS\e[0m"
+echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "Operating System Information :"
+echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo -e "VPS Type    : $typevps"
+echo -e "OS Arch     : $tipeos2"
+echo -e "Hostname    : $HOSTNAME"
+echo -e "OS Name     : $Tipe"
+echo -e "OS Version  : $Versi_OS"
+echo -e "OS URL      : $URL_SUPPORT"
+echo -e "OS BASE     : $basedong"
+echo -e "OS TYPE     : Linux / Unix"
+echo -e "Bash Ver    : $versibash"
+echo -e "Kernel Ver  : $kernelku"
+echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "Hardware Information :"
+echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo -e "Processor   : $tipeprosesor"
+echo -e "Proc Core   : $totalcore"
+echo -e "Virtual     : $typevps"
+echo -e "Cpu Usage   : $cpu_usage"
+echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "System Status / System Information :"
+echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo -e "Uptime      : $uptime"
+echo -e "Total RAM   : $tram MB"
+echo -e "Used RAM    : $uram MB"
+echo -e "Avaible RAM : $fram MB"
+echo -e "Download    : $downloadsize GB ( From Startup/VPS Booting )"
+echo -e "Upload      : $uploadsize GB ( From Startup/VPS Booting )"
+echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "Internet Service Provider Information :"
+echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+echo -e "Public IP   : $MYIP"
+echo -e "Domain      : $Domen"
+echo -e "ISP Name    : $NAMAISP"
+echo -e "Region      : $REGION "
+echo -e "Country     : $COUNTRY"
+echo -e "City        : $CITY "
+echo -e "Time Zone   : $WAKTUE"
+echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "Time & Date & Location & Coordinate Information :"
+echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo -e "Location    : $COUNTRY"
+echo -e "Coordinate  : $koordinat"
+echo -e "Time Zone   : $WAKTUE"
+echo -e "Date        : $harini"
+echo -e "Time        : $jam ( WIB )"
+echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo -e "\e[1;32mSTATUS SCRIPT :\e[0m"
+echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo -e "\e[0;34mUser        :\e[0m $username"
+#echo -e "\e[0;34mOrder ID    :\e[0m $oid"
+echo -e "\e[0;34mExpired     :\e[0m $exp"
+echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo -e ""
+echo -e "              \e[0;32m[\e[1;36mSYSTEM STATUS INFORMATION\e[0;32m]\e[0m"
+echo -e "             \e[0;34m=============================\e[0m"
+echo -e ""
+echo -e "\e[1;33mSTATUS SSH & OPEN VPN:\e[0m"
+echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
 # CHEK STATUS 
 l2tp_status=$(systemctl status xl2tpd | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
@@ -67,12 +211,12 @@ ssh_status=$(systemctl status shadowsocks-libev-server@http | grep Active | awk 
 #sssohtt=$(systemctl status shadowsocks-libev-server@*-http | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 #status="$(systemctl show shadowsocks-libev.service --no-page)"
 #status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
-tls_v2ray_status=$(systemctl status xray | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
-nontls_v2ray_status=$(systemctl status xray | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
-vless_tls_v2ray_status=$(systemctl status xray | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
-vless_nontls_v2ray_status=$(systemctl status xray | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+tls_v2ray_status=$(systemctl status xray.service | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+nontls_v2ray_status=$(systemctl status xray.service | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+vless_tls_v2ray_status=$(systemctl status xray.service | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+vless_nontls_v2ray_status=$(systemctl status xray.service | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 ssr_status=$(systemctl status ssrmu | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
-trojan_server=$(systemctl status xray | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+trojan_server=$(systemctl status xray.service | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 dropbear_status=$(/etc/init.d/dropbear status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 stunnel_service=$(/etc/init.d/stunnel5 status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 sstp_service=$(systemctl status accel-ppp | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
@@ -341,26 +485,26 @@ kernelku=$(uname -r)
 #tipeos2=$(uname -m)
 
 # GETTING DOMAIN NAME
-Domen="$(cat /etc/xray/domain)"
+#Domen="$(cat /etc/xray/domain)"
 echo -e ""
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m              ⇱ Sytem Information ⇲             \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "❇️ Hostname    : $HOSTNAME"
-echo -e "❇️ OS Name     : $Tipe"
+#echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+#echo -e "\E[44;1;39m              ⇱ Sytem Information ⇲             \E[0m"
+#echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+#echo -e "❇️ Hostname    : $HOSTNAME"
+#echo -e "❇️ OS Name     : $Tipe"
 #echo -e "Processor   : $tipeprosesor"
 #echo -e "Proc Core   :$totalcore"
 #echo -e "Virtual     :$typevps"
 #echo -e "Cpu Usage   :$cpu_usage"
-echo -e "❇️ Total RAM   : ${totalram}MB"
-echo -e "❇️ Public IP   : $MYIP"
-echo -e "❇️ Domain      : $Domen"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m          ⇱ Subscription Information ⇲          \E[0m"
-echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "❇️ Client Name : $Name"
-echo -e "❇️ Exp Script  : $Exp"
-echo -e "❇️ Version     : Latest Version"
+#echo -e "❇️ Total RAM   : ${totalram}MB"
+#echo -e "❇️ Public IP   : $MYIP"
+#echo -e "❇️ Domain      : $Domen"
+#echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+#echo -e "\E[44;1;39m          ⇱ Subscription Information ⇲          \E[0m"
+#echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+#echo -e "❇️ Client Name : $Name"
+#echo -e "❇️ Exp Script  : $Exp"
+#echo -e "❇️ Version     : Latest Version"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m            ⇱ Service Information ⇲             \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
