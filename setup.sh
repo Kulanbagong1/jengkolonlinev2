@@ -66,7 +66,7 @@ VALIDITY() {
     exit 0
     fi
 }
-IZIN=$(curl https://raw.githubusercontent.com/rizkihdyt6/izinsc/main/ip | awk '{print $5}' | grep $MYIP)
+IZIN=$(curl https://raw.githubusercontent.com/Kulanbagong1/izinn/main/ip | awk '{print $5}' | grep $MYIP)
 if [ $MYIP = $IZIN ]; then
 echo -e "\e[32mPERMISSION ACCEPT BOSS...\e[0m"
     VALIDITY
