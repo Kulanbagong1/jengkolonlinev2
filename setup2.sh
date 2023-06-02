@@ -102,3 +102,91 @@ else
     exit 0
 fi
 clear
+mkdir /var/lib/bzstorevpn;
+echo "IP=" >> /var/lib/bzstorevpn/ipvps.conf
+echo ""
+wget -q https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/tools.sh;chmod +x tools.sh;./tools.sh
+rm tools.sh
+clear
+wget https://${bzvpn}/cf.sh && chmod +x cf.sh && ./cf.sh
+#install v2ray
+echo -e ""
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m          ⇱ INSTALL V2RAY ⇲          \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e ""
+sleep 2
+wget https://${bzvpnnnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
+#install ssh ovpn
+echo -e ""
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m          ⇱ INSTALL SSH-CDN ⇲          \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e ""
+sleep 2
+wget https://${bzvpn}/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://${bzvpnn}/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
+#install ssr
+echo -e ""
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m          ⇱ INSTALL SSR ⇲          \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e ""
+sleep 2
+wget https://${bzvpnnn}/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
+wget https://${bzvpnnnn}/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
+#installwg
+echo -e ""
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m          ⇱ INSTALL WG ⇲          \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e ""
+sleep 2
+wget https://${bzvpnnnnn}/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
+#install L2TP
+echo -e ""
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m          ⇱ INSTALL L2TP ⇲          \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e ""
+sleep 2
+wget https://${bzvpnnnnnnn}/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
+wget https://${bzvpnnnnnnnn}/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+# Websocket
+echo -e ""
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m          ⇱ INSTALL WEBSOCKET ⇲          \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e ""
+sleep 2
+wget https://${bzvpnnnnnnnnn}/websocket.sh && chmod +x websocket.sh && ./websocket.sh
+# Ohp Server
+echo -e ""
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m          ⇱ INSTALL OHP ⇲          \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e ""
+sleep 2
+wget https://${bzvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+wget https://${bzvpnnnnnnnnnn}/ohp-dropbear.sh && chmod +x ohp-dropbear.sh && ./ohp-dropbear.sh
+wget https://${bzvpnnnnnnnnnn}/ohp-ssh.sh && chmod +x ohp-ssh.sh && ./ohp-ssh.sh
+
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m          ⇱ INSTALL SLOW DNS ⇲          \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+wget -q -O /tmp/nameserver "https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/slowdns/nameserver"
+chmod +x /tmp/nameserver
+bash /tmp/nameserver | tee /root/install.log
+
+rm -f /root/ssh-vpn.sh
+rm -f /root/sstp.sh
+rm -f /root/wg.sh
+rm -f /root/ss.sh
+rm -f /root/ssr.sh
+rm -f /root/ins-xray.sh
+rm -f /root/ipsec.sh
+rm -f /root/set-br.sh
+rm -f /root/websocket.sh
+rm -f /root/ohp.sh
+rm -f /root/ohp-dropbear.sh
+rm -f /root/ohp-ssh.sh
