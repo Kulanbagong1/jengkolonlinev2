@@ -188,7 +188,7 @@ rm -f /root/websocket.sh
 rm -f /root/ohp.sh
 rm -f /root/ohp-dropbear.sh
 rm -f /root/ohp-ssh.sh
-cat <<EOF> /etc/systemd/system/autosett.service
+cat > /etc/systemd/system/autosett.service <<EOF
 [Unit]
 Description=autosetting
 Documentation=https://t.me/Jengkol_Online
