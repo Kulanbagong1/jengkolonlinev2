@@ -17,6 +17,7 @@ BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
+Lyellow='\e[93m'
 # ==========================================
 # Link Hosting Kalian Untuk Ssh Vpn
 bzvpn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/ssh"
@@ -42,10 +43,10 @@ bzvpnnnnnnnnnn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/ohp"
 # Getting
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m          ⇱ SCRIPT BY @XDecrytorId ⇲          \E[0m"
+echo -e "\E[44;1;39m          ⇱ SCRIPT BY @JengkolOnline ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
-sleep 5
+sleep 2
 MYIP=$(wget -qO- icanhazip.com);
 IZIN=$( curl https://Kmk101team.github.io/izin | grep $MYIP )
 echo "Memeriksa Hak Akses VPS..."
@@ -56,20 +57,35 @@ sleep 1
 else
 clear
 echo -e "${PURPLE}Akses Diblokir!${off}"
-echo "Hanya Untuk Pengguna Berbayar!"
-echo "Silahkan Hubungi Admin"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "$Lyellow                ⚡ PREMIUM SPEED SCRIPT ⚡"$NC
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo "$Lyellow Hanya Untuk Pengguna Berbayar!"${NC}
+echo "$Lyellow Silahkan Hubungi Admin"${NC}
+echo -e "$Lyellow                    CONTACT TELEGRAM"$NC
+echo -e "$Lyellow               https://t.me/Jengkol_Online"$NC
+echo -e "$Lyellow                    CONTACT WA"$NC
+echo -e "$Lyellow               https://w.me/6282372139631"$NC
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+sleep 10
 exit 0
 fi
 clear
 echo "Checking VPS"
 clear
-sleep 1
+sleep 2
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m          ⇱ @JengkolOnline PROJECT ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo "$Lyellow Terima Kasih Telah Menggunakan Script JengkolOnline"${NC}
+echo "$Lyellow Proses Penginstallan Akan Di Mulai"${NC}
+echo "$Lyellow Pastikan Kondisi Batrai Terisi"${NC}
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo "$Lyellow by : JengkolOnline"${NC}
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
-sleep 2
+sleep 4
 mkdir /var/lib/bzstorevpn;
 echo "IP=" >> /var/lib/bzstorevpn/ipvps.conf
 echo ""
