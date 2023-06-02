@@ -124,7 +124,7 @@ case $menu in
     restore
     ;;
 6) clear ;
-    wbmn
+    webmin
     ;;
 7) clear ;
     limitspeed
