@@ -67,7 +67,6 @@ echo -e "$Lyellow               https://t.me/Jengkol_Online"$NC
 echo -e "$Lyellow                    CONTACT WA"$NC
 echo -e "$Lyellow               https://w.me/6282372139631"$NC
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-sleep 10
 exit 0
 fi
 clear
