@@ -216,11 +216,11 @@ echo "1.2" > /home/ver
 #clear
 echo " "
 echo "Installation has been completed!!"echo " "
-#echo "============================================================================" | tee -a log-install.txt
+echo "============================================================================" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
-echo "----------------------------------------------------------------------------" | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
 echo "   >>> Service & Port"  | tee -a log-install.txt
+echo ""  | tee -a log-install.txt
+echo "    [INFORMASI SSH & OpenVPN]" | tee -a log-install.txt
 #echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo "   - OpenSSH                 : 443, 22"  | tee -a log-install.txt
 echo "   - OpenVPN                 : TCP 1194, UDP 2200, SSL 990"  | tee -a log-install.txt
