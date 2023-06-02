@@ -60,12 +60,12 @@ echo -e "${PURPLE}Akses Diblokir!${off}"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "$Lyellow                ⚡ PREMIUM SPEED SCRIPT ⚡"$NC
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo "$Lyellow Hanya Untuk Pengguna Berbayar!"${NC}
-echo "$Lyellow Silahkan Hubungi Admin"${NC}
-echo -e "$Lyellow                    CONTACT TELEGRAM"$NC
-echo -e "$Lyellow               https://t.me/Jengkol_Online"$NC
-echo -e "$Lyellow                    CONTACT WA"$NC
-echo -e "$Lyellow               https://w.me/6282372139631"$NC
+echo "Hanya Untuk Pengguna Berbayar!"
+echo "Silahkan Hubungi Admin"
+#echo -e "$Lyellow                    CONTACT TELEGRAM"$NC
+#echo -e "$Lyellow               https://t.me/Jengkol_Online"$NC
+echo -e "CONTACT WA"
+echo -e "https://w.me/6282372139631"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 exit 0
 fi
@@ -88,9 +88,9 @@ sleep 4
 mkdir /var/lib/bzstorevpn;
 echo "IP=" >> /var/lib/bzstorevpn/ipvps.conf
 echo ""
-wget -q https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/tools.sh;chmod +x tools.sh;./tools.sh
-rm tools.sh
-clear
+#wget -q https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/tools.sh;chmod +x tools.sh;./tools.sh
+#rm tools.sh
+#clear
 wget https://${bzvpn}/cf.sh && chmod +x cf.sh && ./cf.sh
 #install v2ray
 echo -e ""
