@@ -48,28 +48,28 @@ $echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━
 #echo -e ""
 #sleep 1
 MYIP=$(wget -qO- icanhazip.com);
-#VALIDITY() {
-#    today=$(date -d "0 days" +"%Y-%m-%d")
-#    Exp1=$(curl https://raw.githubusercontent.com/Kulanbagong1/izinn/main/ip | grep $MYIP | awk '{print $4}')
-#    if [[ $today < $Exp1 ]]; then
-#        echo -e "\e[32mAUTOSCRIPT SUKSES..\e[0m"
-#        sleep 5
-#    else
-#    echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-#    echo -e "                PERMISSION DENIED ! "
-#    echo -e "     Your VPS ${NC}( ${green}$MYIP${NC} ) ${YELLOW}Has been Banned "
-#    echo -e "         Buy access permissions for scripts "
-#    echo -e "                 Contact Admin :"
-#    echo -e "             ${green}Telegram t.me/Jengkol_Online "
-#    echo -e "             WhatsApp wa.me/6282372139631"
-#    echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-#    exit 0
-#    fi
-#}
+VALIDITY() {
+    today=$(date -d "0 days" +"%Y-%m-%d")
+    Exp1=$(curl https://raw.githubusercontent.com/Kulanbagong1/izinn/main/ip | grep $MYIP | awk '{print $4}')
+    if [[ $today < $Exp1 ]]; then
+        echo -e "\e[32mAUTOSCRIPT SUKSES..\e[0m"
+        sleep 5
+    else
+    echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo -e "                PERMISSION DENIED ! "
+    echo -e "     Your VPS ${NC}( ${green}$MYIP${NC} ) ${YELLOW}Has been Banned "
+    echo -e "         Buy access permissions for scripts "
+    echo -e "                 Contact Admin :"
+    echo -e "             ${green}Telegram t.me/Jengkol_Online "
+    echo -e "             WhatsApp wa.me/6282372139631"
+    echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    exit 0
+    fi
+}
 IZIN=$(curl https://raw.githubusercontent.com/Kulanbagong1/izinn/main/ip | awk '{print $5}' | grep $MYIP)
 if [ $MYIP = $IZIN ]; then
 echo -e "\e[32mPERMISSION ACCEPT BOSS...\e[0m"
-$    VALIDITY
+    VALIDITY
 else
     echo -e "${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     echo -e "                PERMISSION DENIED ! "
@@ -200,7 +200,7 @@ RemainAfterExit=yes
 
 [Install]
 WantedBy=multi-user.target
-EOF
+
 systemctl daemon-reload
 systemctl enable autosett
 wget -O /etc/set.sh "https://${bzvpn}/set.sh"
