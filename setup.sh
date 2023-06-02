@@ -188,22 +188,7 @@ rm -f /root/websocket.sh
 rm -f /root/ohp.sh
 rm -f /root/ohp-dropbear.sh
 rm -f /root/ohp-ssh.sh
-rm -rf /etc/systemd/system/autosett.service
-cat <<EOF> /etc/systemd/system/autosett.service 
-[Unit]
-Description=autosetting
-Documentation=https://t.me/Jengkol_Online
 
-[Service]
-Type=oneshot
-ExecStart=/bin/bash /etc/set.sh
-RemainAfterExit=yes
-
-[Install]
-WantedBy=multi-user.target
-EOF
-systemctl daemon-reload
-systemctl enable autosett
 wget -O /etc/set.sh "https://${bzvpn}/set.sh"
 chmod +x /etc/set.sh
 history -c
