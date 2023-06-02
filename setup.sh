@@ -216,7 +216,7 @@ echo "1.2" > /home/ver
 #clear
 echo " "
 echo "Installation has been completed!!"echo " "
-echo "============================================================================" | tee -a log-install.txt
+#echo "============================================================================" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
 echo "----------------------------------------------------------------------------" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
