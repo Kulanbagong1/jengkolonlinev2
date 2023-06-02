@@ -394,6 +394,10 @@ systemctl stop xray.service
 systemctl start xray.service
 systemctl enable xray.service
 systemctl restart xray.service
+systemctl stop xray
+systemctl start xray
+systemctl enable xray
+systemctl restart xray
 
 # Install Trojan Go
 latest_version="$(curl -s "https://api.github.com/repos/p4gefau1t/trojan-go/releases" | grep tag_name | sed -E 's/.*"v(.*)".*/\1/' | head -n 1)"
