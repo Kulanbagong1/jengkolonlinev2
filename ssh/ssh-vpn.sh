@@ -33,10 +33,10 @@ clear
 bzvpn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/ssh"
 
 # Link Hosting Kalian Untuk Xray
-bzvpnn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/xray"
+#bzvpnn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/xray"
 
 # Link Hosting Kalian Untuk Trojan Go
-bzvpnnn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/trojango"
+#bzvpnnn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/trojango"
 
 # Link Hosting Kalian Untuk Stunnel5
 bzvpnnnn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/stunnel5"
@@ -446,26 +446,6 @@ wget -O portvlm "https://${bzvpn}/portvlm.sh"
 wget -O webmin "https://${bzvpn}/webmin.sh"
 wget -O xp "https://${bzvpn}/xp.sh"
 wget -O swapkvm "https://${bzvpn}/swapkvm.sh"
-wget -O addvmess "https://${bzvpnn}/addv2ray.sh"
-wget -O addvless "https://${bzvpnn}/addvless.sh"
-wget -O addvless "https://${bzvpnn}/addsss.sh"
-wget -O addtrojan "https://${bzvpnn}/addtrojan.sh"
-wget -O delvmess "https://${bzvpnn}/delv2ray.sh"
-wget -O delvless "https://${bzvpnn}/delvless.sh"
-wget -O delsss "https://${bzvpnn}/delsss.sh"
-wget -O deltrojan "https://${bzvpnn}/deltrojan.sh"
-wget -O cekvmess "https://${bzvpnn}/cekv2ray.sh"
-wget -O cekvless "https://${bzvpnn}/cekvless.sh"
-wget -O cektrojan "https://${bzvpnn}/cektrojan.sh"
-wget -O renewvmess "https://${bzvpnn}/renewv2ray.sh"
-wget -O renewvless "https://${bzvpnn}/renewvless.sh"
-wget -O renewsss "https://${bzvpnn}/renewsss.sh"
-wget -O renewtrojan "https://${bzvpnn}/renewtrojan.sh"
-wget -O certv2ray "https://${bzvpnn}/certv2ray.sh"
-wget -O addtrgo "https://${bzvpnnn}/addtrgo.sh"
-wget -O deltrgo "https://${bzvpnnn}/deltrgo.sh"
-wget -O renewtrgo "https://${bzvpnnn}/renewtrgo.sh"
-wget -O cektrgo "https://${bzvpnnn}/cektrgo.sh"
 wget -O portsshnontls "https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/websocket/portsshnontls.sh"
 wget -O portsshws "https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/websocket/portsshws.sh"
 wget -O sssmenu "https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/update/sssmenu.sh"
@@ -529,26 +509,6 @@ chmod +x portvlm
 chmod +x webmin
 chmod +x xp
 chmod +x swapkvm
-chmod +x addvmess
-chmod +x addvless
-chmod +x addtrojan
-chmod +x delvmess
-chmod +x delvless
-chmod +x deltrojan
-chmod +x cekvmess
-chmod +x cekvless
-chmod +x cektrojan
-chmod +x renewvmess
-chmod +x renewvless
-chmod +x renewtrojan
-chmod +x certv2ray
-chmod +x addsss
-chmod +x delsss
-chmod +x renewsss
-chmod +x addtrgo
-chmod +x deltrgo
-chmod +x renewtrgo
-chmod +x cektrgo
 chmod +x cekxray 
 echo "0 5 * * * root clearlog && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
