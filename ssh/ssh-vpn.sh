@@ -444,6 +444,9 @@ wget -O portsstp "https://${bzvpn}/portsstp.sh"
 wget -O portsquid "https://${bzvpn}/portsquid.sh"
 wget -O portvlm "https://${bzvpn}/portvlm.sh"
 wget -O webmin "https://${bzvpn}/webmin.sh"
+wget -O bot "https://${bzvpn}/bot.sh"
+wget -O add-bot-notif "https://${bzvpn}/add-bot-notif.sh"
+wget -O del-bot-notif "https://${bzvpn}/del-bot-notif.sh"
 wget -O xp "https://${bzvpn}/xp.sh"
 wget -O swapkvm "https://${bzvpn}/swapkvm.sh"
 wget -O portsshnontls "https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/websocket/portsshnontls.sh"
@@ -467,7 +470,9 @@ wget -O update "https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/m
 
 chmod +x portsshnontls
 chmod +x portsshws
-
+chmod +x bot
+chmod +x add-bot-notif
+chmod +x del-bot-notif
 chmod +x sshovpnmenu
 chmod +x l2tpmenu
 chmod +x pptpmenu
