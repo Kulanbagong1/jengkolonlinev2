@@ -443,7 +443,7 @@ wget -O porttrojan "https://${bzvpn}/porttrojan.sh"
 wget -O portsstp "https://${bzvpn}/portsstp.sh"
 wget -O portsquid "https://${bzvpn}/portsquid.sh"
 wget -O portvlm "https://${bzvpn}/portvlm.sh"
-wget -O wbmn "https://${bzvpn}/webmin.sh"
+wget -O webmin "https://${bzvpn}/webmin.sh"
 wget -O xp "https://${bzvpn}/xp.sh"
 wget -O swapkvm "https://${bzvpn}/swapkvm.sh"
 wget -O addvmess "https://${bzvpnn}/addv2ray.sh"
@@ -526,7 +526,7 @@ chmod +x porttrojan
 chmod +x portsstp
 chmod +x portsquid
 chmod +x portvlm
-chmod +x wbmn
+chmod +x webmin
 chmod +x xp
 chmod +x swapkvm
 chmod +x addvmess
