@@ -175,7 +175,7 @@ case $menu in
     ;;
 19) clear ;
     wget -O installer.sh https://cyberpanel.net/install.sh && chmod +x install.sh && ./install.sh
-
+    ;;
 x) clear ;
    exit
    ;;
