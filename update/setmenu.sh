@@ -98,12 +98,13 @@ echo -e "❇️ 12) Info Script DecrytorId                                      
 echo -e "❇️ 13) EDIT BANNER                                                "
 echo -e "❇️ 14) Restart Script/ Run Script"
 echo -e "\033[96m────────────────────────────────────────────────────────────${NC}"
-echo -e "\e[1;97m                    INSTALL PANEL HOSTING FREE              \e[0m"
+echo -e "\e[1;97m                INSTALL PANEL HOSTING FREE & Lainnya              \e[0m"
 echo -e "\033[96m────────────────────────────────────────────────────────────${NC}"
 echo -e "❇️ 15) VESTA PANELL HOSTING"
 echo -e "❇️ 16) UDP Server Panel"
 echo -e "❇️ 17) INSTAL X-UI Panell v1.6.1"
 echo -e "❇️ 18) INSTAL PTRODECTIL Panel"
+echo -e "❇️ 19) INSTAL CyberPanel"
 echo -e ""
 echo -e "\033[96m────────────────────────────────────────────────────────────${NC}"
 echo -e "\e[1;97m                    NEWBIE TUNNEL              \e[0m"
@@ -169,9 +170,12 @@ case $menu in
 17) clear ;
     bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh) v1.6.1
     ;;
-18) clear
+18) clear ;
     bash <(curl -s https://pterodactyl-installer.se)
     ;;
+19) clear ;
+    wget -O installer.sh https://cyberpanel.net/install.sh && chmod +x install.sh && ./install.sh
+
 x) clear ;
    exit
    ;;
