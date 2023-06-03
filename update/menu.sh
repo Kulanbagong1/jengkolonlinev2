@@ -89,6 +89,7 @@ echo -e "   ${grenbo}[3]❇️${NC} ${YELL}MENU VLESS${NC}          | ${grenbo}[
 echo -e "   ${grenbo}[4]❇️${NC} ${YELL}MENU TROJAN${NC}         | ${grenbo}[10]❇️${NC} ${YELL}MENU SSTP${NC}"
 echo -e "   ${grenbo}[5]❇️${NC} ${YELL}MENU TROJAN GO${NC}      | ${grenbo}[11]❇️${NC} ${YELL}MENU WIREGUARD${NC}"
 echo -e "   ${grenbo}[6]❇️${NC} ${YELL}MENU SOWDOWSOKS${NC}     | ${grenbo}[12]❇️${NC} ${YELL}MENU SOWDOWSOKS-LIBEW${NC}"
+echo -e "   ${grenbo}[21]✓${NC} ${YELL}BUAT AKUN OPEN CLASH${NC}"
 echo -e ""
 echo -e "\033[96m────────────────────────────────────────────────────────────${NC}"
 echo -e "\e[1;97m                    MENU SETTING              \e[0m"
@@ -145,7 +146,7 @@ case $menu in
     ;;
 19) clear ;
     wget --load-cookies /tmp/cookies.txt ${UDPCORE} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp
-   ;;        
+    ;;        
 13) clear ;
     running
     ;;
@@ -159,20 +160,23 @@ case $menu in
     nano /etc/xray/config.json
     ;;   
 17) clear ;
-   bot
-   ;;
+    bot
+    ;;
 18) clear ;
-  wget https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh
-   ;;
+    wget https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh
+    ;;
 12) clear ;
-  ssmenu
-   ;;
+    ssmenu
+    ;;
 20) clear ;
-   running
-   ;;
+    running
+    ;;
+21) clear ;
+    addopenclash
+    ;;
 x) clear ;
-   exit
-   ;;
+    exit
+    ;;
 *) clear ;
     menu
     ;;
