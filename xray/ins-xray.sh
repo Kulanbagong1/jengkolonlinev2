@@ -26,6 +26,12 @@ exit 0
 fi
 clear
 echo "Checking VPS"
+# Link Hosting Kalian Untuk Xray
+bzvpnn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/xray"
+
+# Link Hosting Kalian Untuk Trojan Go
+bzvpnnn="raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/trojango"
+
 clear
 domain=$(cat /etc/xray/domain)
 apt install iptables iptables-persistent -y
@@ -515,6 +521,54 @@ systemctl stop trojan-go.service
 systemctl start trojan-go.service
 systemctl enable trojan-go.service
 systemctl restart trojan-go.service
+
+cd /usr/bin
+wget -O /usr/bin/addvmess "https://${bzvpnn}/addvmess.sh"
+wget -O /usr/bin/addvless "https://${bzvpnn}/addvless.sh"
+wget -O /usr/bin/addsss "https://${bzvpnn}/addsss.sh"
+wget -O /usr/bin/addtrojan "https://${bzvpnn}/addtrojan.sh"
+wget -O /usr/bin/delvmess "https://${bzvpnn}/delvmess.sh"
+wget -O /usr/bin/delvless "https://${bzvpnn}/delvless.sh"
+wget -O /usr/bin/delsss "https://${bzvpnn}/delsss.sh"
+wget -O /usr/bin/deltrojan "https://${bzvpnn}/deltrojan.sh"
+wget -O /usr/bin/cekvmess "https://${bzvpnn}/cekvmess.sh"
+wget -O /usr/bin/cekvless "https://${bzvpnn}/cekvless.sh"
+wget -O /usr/bin/cektrojan "https://${bzvpnn}/cektrojan.sh"
+wget -O /usr/bin/renewvmess "https://${bzvpnn}/renewvmess.sh"
+wget -O /usr/bin/renewvless "https://${bzvpnn}/renewvless.sh"
+wget -O /usr/bin/renewsss "https://${bzvpnn}/renewsss.sh"
+wget -O /usr/bin/renewtrojan "https://${bzvpnn}/renewtrojan.sh"
+wget -O /usr/bin/certv2ray "https://${bzvpnn}/certv2ray.sh"
+
+#Trojan Go
+wget -O /usr/bin/addtrgo "https://${bzvpnnn}/addtrgo.sh"
+wget -O /usr/bin/deltrgo "https://${bzvpnnn}/deltrgo.sh"
+wget -O /usr/bin/renewtrgo "https://${bzvpnnn}/renewtrgo.sh"
+wget -O /usr/bin/cektrgo "https://${bzvpnnn}/cektrgo.sh"
+
+#Chmod Panel
+chmod +x /usr/bin/addvmess
+chmod +x /usr/bin/addvless
+chmod +x /usr/bin/addsss
+chmod +x /usr/bin/addtrojan
+chmod +x /usr/bin/delvmess
+chmod +x /usr/bin/delvless
+chmod +x /usr/bin/delsss
+chmod +x /usr/bin/deltrojan
+chmod +x /usr/bin/cekvmess
+chmod +x /usr/bin/cekvless
+chmod +x /usr/bin/cektrojan
+chmod +x /usr/bin/renewvmess
+chmod +x /usr/bin/renewvless
+chmod +x /usr/bin/renewsss
+chmod +x /usr/bin/renewtrojan
+chmod +x /usr/bin/certv2ray
+
+#Chmod Trojan Go
+chmod +x /usr/bin/addtrgo
+chmod +x /usr/bin/deltrgo
+chmod +x /usr/bin/renewtrgo
+chmod +x /usr/bin/cektrgo
 
 cd
 rm -f ins-xray.sh
