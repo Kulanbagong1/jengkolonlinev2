@@ -38,7 +38,7 @@ BGX="\033[42m"
 Repo1="https://raw.githubusercontent.com/Kulanbagong1/izinn/main/"
 #UDPCORE="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2"
 #ISP=$(cat /etc/xray/isp)
-NS=$(cat /etc/xray/dns)
+#NS=$(cat /etc/xray/dns)
 #CITY=$(cat /etc/xray/city)
 IPVPS=$(curl -s ipv4.icanhazip.com)
 domain=$(cat /etc/xray/domain)
@@ -359,12 +359,12 @@ echo -e "\E[44;1;39m              ⇱ Sytem Information ⇲             \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "❇️ Actore      : $Namee"
 echo -e "❇️ OS Name     : $MODEL"
-echo -e "❇️ Processor   : $tipeprosesor"
-echo -e "❇️ Proc Core   : $totalcore"
-echo -e "❇️ Virtual     : $typevps"
-echo -e "❇️ Cpu Usage   : $cpu_usage"
-echo -e "❇️ Total RAM   : ${totalram}MB"
-echo -e "❇️ Public IP   : $MYIP"
+echo -e "❇️ Server RAM  : $RAM MB"
+echo -e "❇️ Uptim Server: $SERONLINE"
+echo -e "❇️ Core System : $CORE"
+echo -e "❇️ Time        : $TIMEZONE"
+echo -e "❇️ IP VPS      : $IPVPS"
+#echo -e "❇️ Public IP   : $MYIP"
 echo -e "❇️ Domain      : $domain"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m          ⇱ Subscription Information ⇲          \E[0m"
