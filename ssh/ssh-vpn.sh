@@ -463,6 +463,7 @@ wget -O trgomenu "https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2
 wget -O setmenu "https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/update/setmenu.sh"
 wget -O running "https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/update/running.sh"
 wget -O cekxray "https://raw.githubusercontent.com/myridwan/src/ipuk/cekxray.sh"
+wget -O update "https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/update/update.sh"
 
 chmod +x portsshnontls
 chmod +x portsshws
@@ -510,6 +511,7 @@ chmod +x webmin
 chmod +x xp
 chmod +x swapkvm
 chmod +x cekxray 
+chmod +x update
 echo "0 5 * * * root clearlog && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files
