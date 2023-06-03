@@ -36,6 +36,7 @@ BGX="\033[42m"
 #UPDATE="https://raw.githubusercontent.com/Kulanbagong1/scvps/main/"
 #BOT="https://raw.githubusercontent.com/rizkihdyt6/Panel/main/"
 Repo1="https://raw.githubusercontent.com/Kulanbagong1/izinn/main/"
+WEBU="http://files.webuzo.com/install.sh"
 #UDPCORE="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2"
 #ISP=$(cat /etc/xray/isp)
 NS=$(cat /etc/xray/dns)
@@ -105,6 +106,7 @@ echo -e "❇️ 16) UDP Server Panel"
 echo -e "❇️ 17) INSTAL X-UI Panell v1.6.1"
 echo -e "❇️ 18) INSTAL PTRODECTIL Panel"
 echo -e "❇️ 19) INSTAL CyberPanel"
+echo -e "❇️ 20) INSTAL Webuzo"
 echo -e ""
 echo -e "\033[96m────────────────────────────────────────────────────────────${NC}"
 echo -e "\e[1;97m                    NEWBIE TUNNEL              \e[0m"
@@ -176,6 +178,8 @@ case $menu in
 19) clear ;
     wget -O installer.sh https://cyberpanel.net/install.sh && chmod +x install.sh && ./install.sh
     ;;
+20) clear ;
+    wget -N ${WEBU} && chmod 0755 install.sh && ./install.sh
 x) clear ;
    exit
    ;;
