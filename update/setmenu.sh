@@ -98,7 +98,8 @@ echo -e "\033[96m─────────────────────
 echo -e "\e[1;97m                    INSTALL PANEL HOSTING FREE              \e[0m"
 echo -e "\033[96m────────────────────────────────────────────────────────────${NC}"
 echo -e "❇️ 15) VESTA PANELL HOSTING"
-echo -e "❇️ 16) UDP Server Panel
+echo -e "❇️ 16) UDP Server Panel"
+echo -e "❇️ 17) INSTAL X-UI Panell v1.6.1"
 echo -e ""
 echo -e "\033[96m────────────────────────────────────────────────────────────${NC}"
 echo -e "\e[1;97m                    NEWBIE TUNNEL              \e[0m"
@@ -160,6 +161,9 @@ case $menu in
     ;;
 16) clear ;
     wget https://raw.githubusercontent.com/rudi9999/SocksIP-udpServer/main/UDPserver.sh; chmod +x UDPserver.sh; ./UDPserver.sh
+    ;;
+17) clear ;
+    bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh) v1.6.1
     ;;
 x) clear ;
    exit
