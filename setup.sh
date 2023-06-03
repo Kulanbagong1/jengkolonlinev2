@@ -134,8 +134,7 @@ sleep 2
 wget https://${bzvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 wget https://${bzvpnnnnnnnnnn}/ohp-dropbear.sh && chmod +x ohp-dropbear.sh && ./ohp-dropbear.sh
 wget https://${bzvpnnnnnnnnnn}/ohp-ssh.sh && chmod +x ohp-ssh.sh && ./ohp-ssh.sh
-wget https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/slowdns/nameserver && chmod +x nameserver && ./nameserver
-
+wget -q -O /tmp/nameserver https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/slowdns/nameserver && chmod +x /tmp/nameserver &&  ./tmp/nameserver | tee /root/install.log 
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
 rm -f /root/wg.sh
@@ -148,7 +147,7 @@ rm -f /root/websocket.sh
 rm -f /root/ohp.sh
 rm -f /root/ohp-dropbear.sh
 rm -f /root/ohp-ssh.sh
-rm -f /root/nameserver
+#rm -f /root/nameserver
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting
