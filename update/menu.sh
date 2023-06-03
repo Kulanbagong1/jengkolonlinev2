@@ -162,7 +162,7 @@ case $menu in
    bot
    ;;
 18) clear ;
-  wget ${BOT}xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh
+  wget https://raw.githubusercontent.com/Kulanbagong1/jengkolonlinev2/main/xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh
    ;;
 12) clear ;
   ssmenu
