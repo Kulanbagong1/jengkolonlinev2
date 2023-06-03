@@ -539,7 +539,7 @@ wget -O /usr/bin/renewvless "https://${bzvpnn}/renewvless.sh"
 wget -O /usr/bin/renewsss "https://${bzvpnn}/renewsss.sh"
 wget -O /usr/bin/renewtrojan "https://${bzvpnn}/renewtrojan.sh"
 wget -O /usr/bin/certv2ray "https://${bzvpnn}/certv2ray.sh"
-
+wget -O /usr/bin/addopenclash "https://${bzvpnn}/addopenclash.sh"
 #Trojan Go
 wget -O /usr/bin/addtrgo "https://${bzvpnnn}/addtrgo.sh"
 wget -O /usr/bin/deltrgo "https://${bzvpnnn}/deltrgo.sh"
@@ -563,7 +563,7 @@ chmod +x /usr/bin/renewvless
 chmod +x /usr/bin/renewsss
 chmod +x /usr/bin/renewtrojan
 chmod +x /usr/bin/certv2ray
-
+chmod +x /usr/bin/addopenclash
 #Chmod Trojan Go
 chmod +x /usr/bin/addtrgo
 chmod +x /usr/bin/deltrgo
