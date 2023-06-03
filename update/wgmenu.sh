@@ -34,9 +34,9 @@ grenbo="\033[1;95m"
 YELL='\033[1;33m'
 BGX="\033[42m"
 Repo1="https://raw.githubusercontent.com/Kulanbagong1/izinn/main/"
-ISP=$(cat /etc/xray/isp)
+#ISP=$(cat /etc/xray/isp)
 NS=$(cat /etc/xray/dns)
-CITY=$(cat /etc/xray/city)
+#CITY=$(cat /etc/xray/city)
 IPVPS=$(curl -s ipv4.icanhazip.com)
 domain=$(cat /etc/xray/domain)
 RAM=$(free -m | awk 'NR==2 {print $2}')
