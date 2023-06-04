@@ -396,12 +396,8 @@ iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
 netfilter-persistent reload
 systemctl daemon-reload
-systemctl stop xray.service
-systemctl start xray.service
 systemctl enable xray.service
 systemctl restart xray.service
-systemctl stop xray
-systemctl start xray
 systemctl enable xray
 systemctl restart xray
 
@@ -516,9 +512,6 @@ iptables-save > /etc/iptables.up.rules
 iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
 netfilter-persistent reload
-systemctl daemon-reload.service
-systemctl stop trojan-go.service
-systemctl start trojan-go.service
 systemctl enable trojan-go.service
 systemctl restart trojan-go.service
 
