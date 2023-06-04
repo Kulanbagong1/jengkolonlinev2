@@ -65,6 +65,7 @@ shadowsocks_base64e=$(cat /tmp/log1)
 shadowsockslink="ss://${shadowsocks_base64e}@$domain:$tls?plugin=xray-plugin;mux=0;path=/xrayssws;host=$domain;tls#${user}"
 shadowsockslink1="ss://${shadowsocks_base64e}@$domain:$tls?plugin=xray-plugin;mux=0;serviceName=ss-grpc;host=$domain;tls#${user}"
 systemctl restart xray.service
+systemctl restart xray
 rm -rf /tmp/log
 rm -rf /tmp/log1
 cat > /home/vps/public_html/ss-ws-$user.txt <<-END
