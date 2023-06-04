@@ -180,7 +180,5 @@ case $menu in
     ;;
 20) clear ;
     wget -N ${WEBU} && chmod 0755 install.sh && ./install.sh
-*) clear ;
-    menu
     ;;
 esac
