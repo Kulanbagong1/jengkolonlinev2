@@ -59,6 +59,7 @@ xrayvless1="vless://${uuid}@${domain}:$tls?path=/xrayws&security=tls&encryption=
 xrayvless2="vless://${uuid}@${domain}:$nontls?path=/xrayws&encryption=none&type=ws#${user}"
 xrayvless3="vless://${uuid}@${domain}:$tls?mode=gun&security=tls&encryption=none&type=grpc&serviceName=vless-grpc&sni=${domain}#${user}"
 systemctl restart xray.service
+systemctl restart xray
 service cron restart
 clear
 echo -e ""
